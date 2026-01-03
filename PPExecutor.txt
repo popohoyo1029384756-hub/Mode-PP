@@ -1,0 +1,433 @@
+local LMG2L = {};
+
+-- Main ScreenGui
+
+LMG2L["ScreenGui_1"] = Instance.new("ScreenGui", game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui"));
+
+LMG2L["ScreenGui_1"]["ZIndexBehavior"] = Enum.ZIndexBehavior.Sibling;
+
+LMG2L["ScreenGui_1"]["ResetOnSpawn"] = false;
+
+-- Main Frame
+
+LMG2L["Frame_2"] = Instance.new("Frame", LMG2L["ScreenGui_1"]);
+
+LMG2L["Frame_2"]["BorderSizePixel"] = 0;
+
+LMG2L["Frame_2"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+
+LMG2L["Frame_2"]["Size"] = UDim2.new(0, 502, 0, 294);
+
+LMG2L["Frame_2"]["Position"] = UDim2.new(0, 262, 0, 68);
+
+-- Right Panel (EXE/CLR)
+
+LMG2L["Frame2_3"] = Instance.new("Frame", LMG2L["Frame_2"]);
+
+LMG2L["Frame2_3"]["BorderSizePixel"] = 0;
+
+LMG2L["Frame2_3"]["BackgroundColor3"] = Color3.fromRGB(240, 240, 240);
+
+LMG2L["Frame2_3"]["Size"] = UDim2.new(0, 124, 0, 218);
+
+LMG2L["Frame2_3"]["Position"] = UDim2.new(0, 370, 0, 66);
+
+LMG2L["Frame2_3"]["Name"] = [[Frame2]];
+
+-- EXE Button
+
+LMG2L["TextButton_4"] = Instance.new("TextButton", LMG2L["Frame2_3"]);
+
+LMG2L["TextButton_4"]["BorderSizePixel"] = 0;
+
+LMG2L["TextButton_4"]["TextSize"] = 20;
+
+LMG2L["TextButton_4"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+
+LMG2L["TextButton_4"]["Size"] = UDim2.new(0, 106, 0, 98);
+
+LMG2L["TextButton_4"]["Text"] = [[EXE]];
+
+LMG2L["TextButton_4"]["Position"] = UDim2.new(0, 10, 0, 8);
+
+-- CLR Button
+
+LMG2L["TextButton2_5"] = Instance.new("TextButton", LMG2L["Frame2_3"]);
+
+LMG2L["TextButton2_5"]["BorderSizePixel"] = 0;
+
+LMG2L["TextButton2_5"]["TextSize"] = 20;
+
+LMG2L["TextButton2_5"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+
+LMG2L["TextButton2_5"]["Size"] = UDim2.new(0, 106, 0, 90);
+
+LMG2L["TextButton2_5"]["Text"] = [[CLR]];
+
+LMG2L["TextButton2_5"]["Position"] = UDim2.new(0, 10, 0, 118);
+
+-- Input Background Frame
+
+LMG2L["Frame2_6"] = Instance.new("Frame", LMG2L["Frame_2"]);
+
+LMG2L["Frame2_6"]["BorderSizePixel"] = 0;
+
+LMG2L["Frame2_6"]["BackgroundColor3"] = Color3.fromRGB(240, 240, 240);
+
+LMG2L["Frame2_6"]["Size"] = UDim2.new(0, 350, 0, 146);
+
+LMG2L["Frame2_6"]["Position"] = UDim2.new(0, 10, 0, 64);
+
+LMG2L["Frame2_6"]["Name"] = [[Frame2]];
+
+-- Script Input Box
+
+LMG2L["input_7"] = Instance.new("TextBox", LMG2L["Frame_2"]);
+
+LMG2L["input_7"]["Name"] = [[input]];
+
+LMG2L["input_7"]["BorderSizePixel"] = 0;
+
+LMG2L["input_7"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+
+LMG2L["input_7"]["Size"] = UDim2.new(0, 320, 0, 138);
+
+LMG2L["input_7"]["Position"] = UDim2.new(0, 34, 0, 68);
+
+LMG2L["input_7"]["Text"] = "";
+
+LMG2L["input_7"]["ClearTextOnFocus"] = false;
+
+LMG2L["input_7"]["MultiLine"] = true;
+
+LMG2L["input_7"]["TextWrapped"] = true;
+
+LMG2L["input_7"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+
+LMG2L["input_7"]["TextYAlignment"] = Enum.TextYAlignment.Top;
+
+-- Header Bar
+
+LMG2L["Frame_8"] = Instance.new("Frame", LMG2L["Frame_2"]);
+
+LMG2L["Frame_8"]["BorderSizePixel"] = 0;
+
+LMG2L["Frame_8"]["BackgroundColor3"] = Color3.fromRGB(216, 216, 216);
+
+LMG2L["Frame_8"]["Size"] = UDim2.new(0, 502, 0, 54);
+
+LMG2L["Frame_8"]["Active"] = true;
+
+-- Title
+
+LMG2L["TextLabel_b"] = Instance.new("TextLabel", LMG2L["Frame_8"]);
+
+LMG2L["TextLabel_b"]["BorderSizePixel"] = 0;
+
+LMG2L["TextLabel_b"]["TextSize"] = 15;
+
+LMG2L["TextLabel_b"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+
+LMG2L["TextLabel_b"]["Size"] = UDim2.new(0, 188, 0, 24);
+
+LMG2L["TextLabel_b"]["Text"] = [[PP backdoor]];
+
+LMG2L["TextLabel_b"]["Position"] = UDim2.new(0, 10, 0, 14);
+
+-- re Button
+
+LMG2L["TextButton3_a"] = Instance.new("TextButton", LMG2L["Frame_8"]);
+
+LMG2L["TextButton3_a"]["BorderSizePixel"] = 0;
+
+LMG2L["TextButton3_a"]["TextSize"] = 20;
+
+LMG2L["TextButton3_a"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+
+LMG2L["TextButton3_a"]["Size"] = UDim2.new(0, 72, 0, 38);
+
+LMG2L["TextButton3_a"]["Text"] = [[re]];
+
+LMG2L["TextButton3_a"]["Position"] = UDim2.new(0, 206, 0, 8);
+
+-- r6 Button
+
+LMG2L["TextButton2_9"] = Instance.new("TextButton", LMG2L["Frame_8"]);
+
+LMG2L["TextButton2_9"]["BorderSizePixel"] = 0;
+
+LMG2L["TextButton2_9"]["TextSize"] = 20;
+
+LMG2L["TextButton2_9"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+
+LMG2L["TextButton2_9"]["Size"] = UDim2.new(0, 72, 0, 38);
+
+LMG2L["TextButton2_9"]["Text"] = [[r6]];
+
+LMG2L["TextButton2_9"]["Position"] = UDim2.new(0, 288, 0, 8);
+
+-- infect Button
+
+LMG2L["TextButton_c"] = Instance.new("TextButton", LMG2L["Frame_8"]);
+
+LMG2L["TextButton_c"]["BorderSizePixel"] = 0;
+
+LMG2L["TextButton_c"]["TextSize"] = 20;
+
+LMG2L["TextButton_c"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+
+LMG2L["TextButton_c"]["Size"] = UDim2.new(0, 126, 0, 38);
+
+LMG2L["TextButton_c"]["Text"] = [[infect]];
+
+LMG2L["TextButton_c"]["Position"] = UDim2.new(0, 368, 0, 8);
+
+-- Output Bar
+
+LMG2L["ScrollingFrame_d"] = Instance.new("ScrollingFrame", LMG2L["Frame_2"]);
+
+LMG2L["ScrollingFrame_d"]["BorderSizePixel"] = 0;
+
+LMG2L["ScrollingFrame_d"]["BackgroundColor3"] = Color3.fromRGB(240, 240, 240);
+
+LMG2L["ScrollingFrame_d"]["Size"] = UDim2.new(0, 346, 0, 36);
+
+LMG2L["ScrollingFrame_d"]["Position"] = UDim2.new(0, 12, 0, 256);
+
+LMG2L["TextBox_e"] = Instance.new("TextBox", LMG2L["ScrollingFrame_d"]);
+
+LMG2L["TextBox_e"]["BorderSizePixel"] = 0;
+
+LMG2L["TextBox_e"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+
+LMG2L["TextBox_e"]["Size"] = UDim2.new(0, 320, 0, 34);
+
+LMG2L["TextBox_e"]["Position"] = UDim2.new(0, 18, 0, 4);
+
+LMG2L["TextBox_e"]["Text"] = ""; 
+
+LMG2L["TextBox_e"]["ClearTextOnFocus"] = false;
+
+LMG2L["TextBox_e"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+
+-- ==========================================
+
+-- [[ ระบบลาก (Smooth Dragging) ]]
+
+-- ==========================================
+
+local UIS = game:GetService("UserInputService")
+
+local dragFrame = LMG2L["Frame_2"]
+
+local dragHandle = LMG2L["Frame_8"]
+
+local dragToggle, dragStart, startPos
+
+dragHandle.InputBegan:Connect(function(input)
+
+	if (input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch) then		dragToggle = true
+
+		dragStart = input.Position
+
+		startPos = dragFrame.Position
+
+		input.Changed:Connect(function()
+
+			if input.UserInputState == Enum.UserInputState.End then dragToggle = false end
+
+		end)
+
+	end
+
+end)
+
+UIS.InputChanged:Connect(function(input)
+
+	if dragToggle and (input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch) then
+
+		local delta = input.Position - dragStart
+
+		game:GetService("TweenService"):Create(dragFrame, TweenInfo.new(0.1), {
+
+			Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X, startPos.Y.Scale, startPos.Y.Offset + delta.Y)
+
+		}):Play()
+
+	end
+
+end)
+
+-- ==========================================
+
+-- [[ แก้ไข: ขอบสีฟ้าที่ "ขอบปุ่ม" ไม่ใช่รอบตัวหนังสือ ]]
+
+-- ==========================================
+
+local function ApplyBlueBorder(button)
+
+	local stroke = Instance.new("UIStroke")
+
+	stroke.Color = Color3.fromRGB(0, 170, 255)
+
+	stroke.Thickness = 3
+
+	stroke.ApplyStrokeMode = Enum.ApplyStrokeMode.Border -- บังคับให้เป็นขอบของวัตถุ ไม่ใช่ตัวหนังสือ
+
+	stroke.Enabled = false
+
+	stroke.Parent = button
+
+	button.MouseButton1Down:Connect(function()
+
+		stroke.Enabled = true
+
+	end)
+
+	button.InputEnded:Connect(function(input)
+
+		if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
+
+			stroke.Enabled = false
+
+		end
+
+	end)
+
+end
+
+-- นำไปใช้กับทุกปุ่ม ยกเว้น TextBox
+
+for _, obj in pairs(LMG2L) do
+
+	if obj:IsA("TextButton") then
+
+		ApplyBlueBorder(obj)
+
+	end
+
+end
+
+-- ==========================================
+
+-- [[ แก้ไขฟังก์ชัน RE: เกิดใหม่ที่เดิมทันที ]]
+
+-- ==========================================
+
+LMG2L["TextButton3_a"].MouseButton1Click:Connect(function()
+
+	local player = game.Players.LocalPlayer
+
+	local character = player.Character
+
+	
+
+	if character and character:FindFirstChild("HumanoidRootPart") then
+
+		local oldPos = character.HumanoidRootPart.CFrame -- เก็บพิกัดเดิมไว้
+
+		
+
+		player:LoadCharacter() -- สั่งเกิดใหม่ทันที
+
+		
+
+		-- รอตัวละครใหม่เข้าเกมและวาร์ปไปจุดเดิม
+
+		task.spawn(function()
+
+			local newChar = player.CharacterAdded:Wait()
+
+			local hrp = newChar:WaitForChild("HumanoidRootPart", 5)
+
+			if hrp then
+
+				task.wait(0.1) -- รอจังหวะนิดเดียวเพื่อให้ระบบโหลดพิกัดเสร็จ
+
+				hrp.CFrame = oldPos
+
+				LMG2L["TextBox_e"].Text = "RE Success: Respawned at Sport!"
+
+				LMG2L["TextBox_e"].TextColor3 = Color3.fromRGB(0, 170, 0)
+
+			end
+
+		end)
+
+	end
+
+end)
+
+-- [[ EXE Button ]]
+
+LMG2L["TextButton_4"].MouseButton1Click:Connect(function()
+
+	local code = LMG2L["input_7"].Text
+
+	local output = LMG2L["TextBox_e"]
+
+	if code == "" or code:match("^%s*$") then
+
+		output.Text = "Error: No script provided!"
+
+		output.TextColor3 = Color3.fromRGB(255, 0, 0)
+
+		return
+
+	end
+
+	local success, func = pcall(loadstring, code)
+
+	if success then
+
+		pcall(func)
+
+		output.Text = "Success: Executed!"
+
+		output.TextColor3 = Color3.fromRGB(0, 170, 0)
+
+	else
+
+		output.Text = "Error: " .. tostring(func)
+
+		output.TextColor3 = Color3.fromRGB(255, 0, 0)
+
+	end
+
+end)
+
+-- [[ CLR Button ]]
+
+LMG2L["TextButton2_5"].MouseButton1Click:Connect(function()
+
+	LMG2L["input_7"].Text = "" 
+
+end)
+
+-- [[ r6 Button ]]
+
+LMG2L["TextButton2_9"].MouseButton1Click:Connect(function()
+
+	local player = game.Players.LocalPlayer
+
+	player:LoadCharacter()
+
+	local character = player.Character or player.CharacterAdded:Wait()
+
+	character:WaitForChild("Humanoid").RigType = Enum.HumanoidRigType.R6
+
+	LMG2L["TextBox_e"].Text = "Switched to R6!"
+
+end)
+
+-- [[ infect Button ]]
+
+LMG2L["TextButton_c"].MouseButton1Click:Connect(function()
+
+	LMG2L["TextBox_e"].Text = "Infect: Under development"
+
+	LMG2L["TextBox_e"].TextColor3 = Color3.fromRGB(0, 128, 255)
+
+end)
+
+return LMG2L["ScreenGui_1"]

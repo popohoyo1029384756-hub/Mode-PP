@@ -1,0 +1,268 @@
+--[[
+ .____                  ________ ___.    _____                           __                
+ |    |    __ _______   \_____  \\_ |___/ ____\_ __  ______ ____ _____ _/  |_  ___________ 
+ |    |   |  |  \__  \   /   |   \| __ \   __\  |  \/  ___// ___\\__  \\   __\/  _ \_  __ \
+ |    |___|  |  // __ \_/    |    \ \_\ \  | |  |  /\___ \\  \___ / __ \|  | (  <_> )  | \/
+ |_______ \____/(____  /\_______  /___  /__| |____//____  >\___  >____  /__|  \____/|__|   
+         \/          \/         \/    \/                \/     \/     \/                   
+          \_Welcome to LuaObfuscator.com   (Alpha 0.10.9) ~  Much Love, Ferib 
+
+]]--
+
+local v0 = {};
+v0['ScreenGui_1'] = Instance.new("ScreenGui", game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui"));
+v0['ScreenGui_1']['ZIndexBehavior'] = Enum.ZIndexBehavior.Sibling;
+v0['Frame_2'] = Instance.new("Frame", v0['ScreenGui_1']);
+v0['Frame_2']['BorderSizePixel'] = 0;
+v0['Frame_2']['BackgroundColor3'] = Color3.fromRGB(255, 255, 255);
+v0['Frame_2']['Size'] = UDim2.new(0, 388, 0, 228);
+v0['Frame_2']['Position'] = UDim2.new(0, 312, 0, 64);
+v0['Frame_3'] = Instance.new("Frame", v0['Frame_2']);
+v0['Frame_3']['BorderSizePixel'] = 0;
+v0['Frame_3']['BackgroundColor3'] = Color3.fromRGB(241, 241, 241);
+v0['Frame_3']['Size'] = UDim2.new(0, 388, 0, 40);
+v0['TextButton_4'] = Instance.new("TextButton", v0['Frame_3']);
+v0['TextButton_4']['BorderSizePixel'] = 0;
+v0['TextButton_4']['TextSize'] = 20;
+v0['TextButton_4']['BackgroundColor3'] = Color3.fromRGB(255, 255, 255);
+v0['TextButton_4']['Size'] = UDim2.new(0, 52, 0, 28);
+v0['TextButton_4']['Text'] = [[×]];
+v0['TextButton_4']['Position'] = UDim2.new(0, 330, 0, 6);
+v0['TextButton_5'] = Instance.new("TextButton", v0['Frame_3']);
+v0['TextButton_5']['BorderSizePixel'] = 0;
+v0['TextButton_5']['TextSize'] = 20;
+v0['TextButton_5']['BackgroundColor3'] = Color3.fromRGB(255, 255, 255);
+v0['TextButton_5']['Size'] = UDim2.new(0, 48, 0, 28);
+v0['TextButton_5']['Text'] = [[-]];
+v0['TextButton_5']['Position'] = UDim2.new(0, 274, 0, 6);
+v0['ImageButton_6'] = Instance.new("ImageButton", v0['Frame_3']);
+v0['ImageButton_6']['BorderSizePixel'] = 0;
+v0['ImageButton_6']['BackgroundColor3'] = Color3.fromRGB(255, 255, 255);
+v0['ImageButton_6']['Image'] = [[rbxassetid://109266385905091]];
+v0['ImageButton_6']['Size'] = UDim2.new(0, 30, 0, 30);
+v0['ImageButton_6']['Position'] = UDim2.new(0, 6, 0, 6);
+v0['TextLabel_7'] = Instance.new("TextLabel", v0['Frame_3']);
+v0['TextLabel_7']['BorderSizePixel'] = 0;
+v0['TextLabel_7']['TextSize'] = 15;
+v0['TextLabel_7']['TextXAlignment'] = Enum.TextXAlignment.Left;
+v0['TextLabel_7']['BackgroundColor3'] = Color3.fromRGB(255, 255, 255);
+v0['TextLabel_7']['Size'] = UDim2.new(0, 222, 0, 30);
+v0['TextLabel_7']['Text'] = [[PP Mini Executor]];
+v0['TextLabel_7']['Position'] = UDim2.new(0, 40, 0, 6);
+v0['Frame_8'] = Instance.new("Frame", v0['Frame_2']);
+v0['Frame_8']['BorderSizePixel'] = 0;
+v0['Frame_8']['BackgroundColor3'] = Color3.fromRGB(241, 241, 241);
+v0['Frame_8']['Size'] = UDim2.new(0, 100, 0, 176);
+v0['Frame_8']['Position'] = UDim2.new(0, 282, 0, 46);
+v0['TextButton_9'] = Instance.new("TextButton", v0['Frame_8']);
+v0['TextButton_9']['BorderSizePixel'] = 0;
+v0['TextButton_9']['TextSize'] = 20;
+v0['TextButton_9']['BackgroundColor3'] = Color3.fromRGB(255, 255, 255);
+v0['TextButton_9']['Size'] = UDim2.new(0, 86, 0, 80);
+v0['TextButton_9']['Text'] = [[EXE]];
+v0['TextButton_9']['Position'] = UDim2.new(0, 8, 0, 6);
+v0['TextButton_a'] = Instance.new("TextButton", v0['Frame_8']);
+v0['TextButton_a']['BorderSizePixel'] = 0;
+v0['TextButton_a']['TextSize'] = 20;
+v0['TextButton_a']['BackgroundColor3'] = Color3.fromRGB(255, 255, 255);
+v0['TextButton_a']['Size'] = UDim2.new(0, 85, 0, 75);
+v0['TextButton_a']['Text'] = [[CLR]];
+v0['TextButton_a']['Position'] = UDim2.new(0, 8, 0, 94);
+v0['Frame_b'] = Instance.new("Frame", v0['Frame_2']);
+v0['Frame_b']['BorderSizePixel'] = 0;
+v0['Frame_b']['BackgroundColor3'] = Color3.fromRGB(241, 241, 241);
+v0['Frame_b']['Size'] = UDim2.new(0, 270, 0, 122);
+v0['Frame_b']['Position'] = UDim2.new(0, 6, 0, 46);
+v0['Frame_b']['Visible'] = true;
+v0['TextBox_c'] = Instance.new("TextBox", v0['Frame_b']);
+v0['TextBox_c']['TextXAlignment'] = Enum.TextXAlignment.Left;
+v0['TextBox_c']['BorderSizePixel'] = 0;
+v0['TextBox_c']['TextWrapped'] = true;
+v0['TextBox_c']['TextYAlignment'] = Enum.TextYAlignment.Top;
+v0['TextBox_c']['BackgroundColor3'] = Color3.fromRGB(255, 255, 255);
+v0['TextBox_c']['Size'] = UDim2.new(0, 242, 0, 114);
+v0['TextBox_c']['Position'] = UDim2.new(0, 20, 0, 4);
+v0['TextBox_c']['Text'] = "";
+v0['TextBox_c']['ClearTextOnFocus'] = false;
+v0['TextBox_c']['MultiLine'] = true;
+v0['Frame_d'] = Instance.new("Frame", v0['Frame_2']);
+v0['Frame_d']['BorderSizePixel'] = 0;
+v0['Frame_d']['BackgroundColor3'] = Color3.fromRGB(241, 241, 241);
+v0['Frame_d']['Size'] = UDim2.new(0, 270, 0, 28);
+v0['Frame_d']['Position'] = UDim2.new(0, 6, 0, 200);
+v0['Frame_d']['Visible'] = true;
+v0['TextBox_e'] = Instance.new("TextBox", v0['Frame_d']);
+v0['TextBox_e']['TextXAlignment'] = Enum.TextXAlignment.Left;
+v0['TextBox_e']['BorderSizePixel'] = 0;
+v0['TextBox_e']['TextWrapped'] = true;
+v0['TextBox_e']['BackgroundColor3'] = Color3.fromRGB(255, 255, 255);
+v0['TextBox_e']['Size'] = UDim2.new(0, 242, 0, 22);
+v0['TextBox_e']['Position'] = UDim2.new(0, 22, 0, 4);
+v0['TextBox_e']['Text'] = "";
+v0['TextBox_e']['ClearTextOnFocus'] = false;
+v0['Frame_8']['Visible'] = true;
+local v95 = v0['TextBox_c'];
+local v96 = v0['TextBox_e'];
+local v97 = v0['Frame_2'];
+local v98 = v0['Frame_3'];
+local v99 = game:GetService("UserInputService");
+local v100 = game:GetService("TweenService");
+local v101 = false;
+local v102, v103, v104;
+v98.InputBegan:Connect(function(v106)
+	if ((v106.UserInputType == Enum.UserInputType.MouseButton1) or (v106.UserInputType == Enum.UserInputType.Touch)) then
+		local FlatIdent_1743D = 0;
+		while true do
+			if (FlatIdent_1743D == 0) then
+				v102 = true;
+				v103 = v106.Position;
+				FlatIdent_1743D = 1;
+			end
+			if (FlatIdent_1743D == 1) then
+				v104 = v97.Position;
+				v106.Changed:Connect(function()
+					if (v106.UserInputState == Enum.UserInputState.End) then
+						v102 = false;
+					end
+				end);
+				break;
+			end
+		end
+	end
+end);
+v99.InputChanged:Connect(function(v107)
+	if (v102 and ((v107.UserInputType == Enum.UserInputType.MouseMovement) or (v107.UserInputType == Enum.UserInputType.Touch))) then
+		local v122 = v107.Position - v103;
+		v100:Create(v97, TweenInfo.new(0.1), {Position=UDim2.new(v104.X.Scale, v104.X.Offset + v122.X, v104.Y.Scale, v104.Y.Offset + v122.Y)}):Play();
+	end
+end);
+local function v105(v108)
+	local FlatIdent_25011 = 0;
+	local v109;
+	while true do
+		if (FlatIdent_25011 == 2) then
+			v108.MouseLeave:Connect(function()
+				v108.BackgroundColor3 = v109;
+			end);
+			break;
+		end
+		if (FlatIdent_25011 == 1) then
+			v108.MouseButton1Up:Connect(function()
+				v108.BackgroundColor3 = v109;
+			end);
+			v108.MouseEnter:Connect(function()
+				v108.BackgroundColor3 = Color3.fromRGB(220, 237, 255);
+			end);
+			FlatIdent_25011 = 2;
+		end
+		if (FlatIdent_25011 == 0) then
+			v109 = v108.BackgroundColor3;
+			v108.MouseButton1Down:Connect(function()
+				v108.BackgroundColor3 = Color3.fromRGB(59, 130, 246);
+			end);
+			FlatIdent_25011 = 1;
+		end
+	end
+end
+for v110, v111 in pairs(v0) do
+	if v111:IsA("TextButton") then
+		v105(v111);
+	end
+end
+v0['TextButton_4'].MouseButton1Click:Connect(function()
+	v0['ScreenGui_1']:Destroy();
+end);
+v0['TextButton_5'].MouseButton1Click:Connect(function()
+	local FlatIdent_61585 = 0;
+	while true do
+		if (0 == FlatIdent_61585) then
+			v101 = not v101;
+			if v101 then
+				local FlatIdent_A36C = 0;
+				while true do
+					if (FlatIdent_A36C == 0) then
+						v0['Frame_b'].Visible = false;
+						v0['Frame_d'].Visible = false;
+						FlatIdent_A36C = 1;
+					end
+					if (FlatIdent_A36C == 1) then
+						v0['Frame_8'].Visible = false;
+						v97.Size = UDim2.new(0, 388, 0, 40);
+						break;
+					end
+				end
+			else
+				local FlatIdent_7FAC9 = 0;
+				while true do
+					if (FlatIdent_7FAC9 == 1) then
+						v0['Frame_8'].Visible = true;
+						v97.Size = UDim2.new(0, 388, 0, 228);
+						break;
+					end
+					if (0 == FlatIdent_7FAC9) then
+						v0['Frame_b'].Visible = true;
+						v0['Frame_d'].Visible = true;
+						FlatIdent_7FAC9 = 1;
+					end
+				end
+			end
+			break;
+		end
+	end
+end);
+v0['TextButton_9'].MouseButton1Click:Connect(function()
+	local FlatIdent_77C29 = 0;
+	local v112;
+	local v113;
+	local v114;
+	while true do
+		if (FlatIdent_77C29 == 0) then
+			v112 = v95.Text;
+			if (not v112 or v112:match("^%s*$")) then
+				local FlatIdent_2AC68 = 0;
+				while true do
+					if (FlatIdent_2AC68 == 0) then
+						v96.Text = "Error: No script provided!";
+						v96.TextColor3 = Color3.fromRGB(255, 0, 0);
+						FlatIdent_2AC68 = 1;
+					end
+					if (FlatIdent_2AC68 == 1) then
+						return;
+					end
+				end
+			end
+			FlatIdent_77C29 = 1;
+		end
+		if (FlatIdent_77C29 == 1) then
+			v113, v114 = pcall(loadstring, v112);
+			if v113 then
+				local FlatIdent_33EA4 = 0;
+				while true do
+					if (FlatIdent_33EA4 == 1) then
+						v96.TextColor3 = Color3.fromRGB(0, 255, 0);
+						break;
+					end
+					if (FlatIdent_33EA4 == 0) then
+						pcall(v114);
+						v96.Text = "Success: Executed!";
+						FlatIdent_33EA4 = 1;
+					end
+				end
+			else
+				local FlatIdent_380E8 = 0;
+				while true do
+					if (FlatIdent_380E8 == 0) then
+						v96.Text = "Error: " .. tostring(v114);
+						v96.TextColor3 = Color3.fromRGB(255, 0, 0);
+						break;
+					end
+				end
+			end
+			break;
+		end
+	end
+end);
+v0['TextButton_a'].MouseButton1Click:Connect(function()
+	v95.Text = "";
+end);
+return v0['ScreenGui_1'], require;
