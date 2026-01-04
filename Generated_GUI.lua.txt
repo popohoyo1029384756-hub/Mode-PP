@@ -1,0 +1,500 @@
+-- AI Generated Universal GUI Script
+if not game:IsLoaded() then game.Loaded:Wait() end
+
+local function getGuiParent()
+    local ok, cg = pcall(function()
+        return game:GetService("CoreGui")
+    end)
+    if ok and cg then return cg end
+    local p = game:GetService("Players")
+    if p.LocalPlayer then
+        return p.LocalPlayer:WaitForChild("PlayerGui")
+    end
+end
+
+local GUI_PARENT = getGuiParent()
+if not GUI_PARENT then warn("GUI parent not found") return end
+
+-- Instances: 63 | Scripts: 0 | Modules: 0 | Tags: 0
+local GUI = {};
+
+-- Players.pun_punPP102030.PlayerGui.ScreenGui
+GUI["ScreenGui_1"] = Instance.new("ScreenGui").LocalPlayer:WaitForChild("PlayerGui"));
+GUI["ScreenGui_1"]["ZIndexBehavior"] = Enum.ZIndexBehavior.Sibling;
+
+
+-- Players.pun_punPP102030.PlayerGui.ScreenGui.gui
+GUI["gui_2"] = Instance.new("Frame", GUI["ScreenGui_1"]);
+GUI["gui_2"]["BorderSizePixel"] = 0;
+GUI["gui_2"]["BackgroundColor3"] = Color3.fromRGB(251, 251, 251);
+GUI["gui_2"]["Size"] = UDim2.new(0, 506, 0, 360);
+GUI["gui_2"]["Position"] = UDim2.new(0, 282, 0, 28);
+GUI["gui_2"]["Name"] = [[gui]];
+
+
+-- Players.pun_punPP102030.PlayerGui.ScreenGui.gui.พับ gui
+GUI["พับ gui_3"] = Instance.new("TextButton", GUI["gui_2"]);
+GUI["พับ gui_3"]["BorderSizePixel"] = 0;
+GUI["พับ gui_3"]["TextSize"] = 7;
+GUI["พับ gui_3"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+GUI["พับ gui_3"]["BackgroundTransparency"] = 1;
+GUI["พับ gui_3"]["Size"] = UDim2.new(0, 38, 0, 28);
+GUI["พับ gui_3"]["Text"] = [[—]];
+GUI["พับ gui_3"]["Name"] = [[พับ gui]];
+GUI["พับ gui_3"]["Position"] = UDim2.new(0, 398, 0, 0);
+
+
+-- Players.pun_punPP102030.PlayerGui.ScreenGui.gui.UICorner
+GUI["UICorner_4"] = Instance.new("UICorner", GUI["gui_2"]);
+GUI["UICorner_4"]["CornerRadius"] = UDim.new(0, 2);
+
+
+-- Players.pun_punPP102030.PlayerGui.ScreenGui.gui.TextButton2
+GUI["TextButton2_5"] = Instance.new("TextButton", GUI["gui_2"]);
+GUI["TextButton2_5"]["BorderSizePixel"] = 0;
+GUI["TextButton2_5"]["TextSize"] = 7;
+GUI["TextButton2_5"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+GUI["TextButton2_5"]["BackgroundTransparency"] = 1;
+GUI["TextButton2_5"]["Size"] = UDim2.new(0, 24, 0, 28);
+GUI["TextButton2_5"]["Text"] = [[[]]];
+GUI["TextButton2_5"]["Name"] = [[TextButton2]];
+GUI["TextButton2_5"]["Position"] = UDim2.new(0, 442, 0, 0);
+
+
+-- Players.pun_punPP102030.PlayerGui.ScreenGui.gui.UIStroke
+GUI["UIStroke_6"] = Instance.new("UIStroke", GUI["gui_2"]);
+GUI["UIStroke_6"]["Thickness"] = 0.4;
+
+
+-- Players.pun_punPP102030.PlayerGui.ScreenGui.gui.name gui
+GUI["name gui_7"] = Instance.new("TextLabel", GUI["gui_2"]);
+GUI["name gui_7"]["BorderSizePixel"] = 0;
+GUI["name gui_7"]["TextYAlignment"] = Enum.TextYAlignment.Top;
+GUI["name gui_7"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+GUI["name gui_7"]["Size"] = UDim2.new(0, 98, 0, 16);
+GUI["name gui_7"]["Text"] = [[project putigma]];
+GUI["name gui_7"]["Name"] = [[name gui]];
+GUI["name gui_7"]["Position"] = UDim2.new(0, 28, 0, 6);
+
+
+-- Players.pun_punPP102030.PlayerGui.ScreenGui.gui.Executor Frame
+GUI["Executor Frame_8"] = Instance.new("Frame", GUI["gui_2"]);
+GUI["Executor Frame_8"]["BorderSizePixel"] = 0;
+GUI["Executor Frame_8"]["BackgroundColor3"] = Color3.fromRGB(241, 241, 241);
+GUI["Executor Frame_8"]["Size"] = UDim2.new(0, 506, 0, 318);
+GUI["Executor Frame_8"]["Position"] = UDim2.new(0, 0, 0, 28);
+GUI["Executor Frame_8"]["Name"] = [[Executor Frame]];
+
+
+-- Players.pun_punPP102030.PlayerGui.ScreenGui.gui.Executor Frame.ไม่มีประโยชน์มีไว้ตกแต่ง
+GUI["ไม่มีประโยชน์มีไว้ตกแต่ง_9"] = Instance.new("Frame", GUI["Executor Frame_8"]);
+GUI["ไม่มีประโยชน์มีไว้ตกแต่ง_9"]["BorderSizePixel"] = 0;
+GUI["ไม่มีประโยชน์มีไว้ตกแต่ง_9"]["BackgroundColor3"] = Color3.fromRGB(246, 246, 246);
+GUI["ไม่มีประโยชน์มีไว้ตกแต่ง_9"]["Size"] = UDim2.new(0, 60, 0, 14);
+GUI["ไม่มีประโยชน์มีไว้ตกแต่ง_9"]["Position"] = UDim2.new(0, 52, 0, 12);
+GUI["ไม่มีประโยชน์มีไว้ตกแต่ง_9"]["Name"] = [[ไม่มีประโยชน์มีไว้ตกแต่ง]];
+
+
+-- Players.pun_punPP102030.PlayerGui.ScreenGui.gui.Executor Frame.ไม่มีประโยชน์มีไว้ตกแต่ง.UICorner
+GUI["UICorner_a"] = Instance.new("UICorner", GUI["ไม่มีประโยชน์มีไว้ตกแต่ง_9"]);
+GUI["UICorner_a"]["CornerRadius"] = UDim.new(0, 2);
+
+
+-- Players.pun_punPP102030.PlayerGui.ScreenGui.gui.Executor Frame.ไม่มีประโยชน์มีไว้ตกแต่ง.TextLabel
+GUI["TextLabel_b"] = Instance.new("TextLabel", GUI["ไม่มีประโยชน์มีไว้ตกแต่ง_9"]);
+GUI["TextLabel_b"]["BorderSizePixel"] = 0;
+GUI["TextLabel_b"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+GUI["TextLabel_b"]["BackgroundTransparency"] = 1;
+GUI["TextLabel_b"]["Size"] = UDim2.new(0, 58, 0, 12);
+GUI["TextLabel_b"]["Text"] = [[Admin Panel]];
+GUI["TextLabel_b"]["Position"] = UDim2.new(0, 2, 0, 0);
+
+
+-- Players.pun_punPP102030.PlayerGui.ScreenGui.gui.Executor Frame.Main Executor Frame
+GUI["Main Executor Frame_c"] = Instance.new("Frame", GUI["Executor Frame_8"]);
+GUI["Main Executor Frame_c"]["BorderSizePixel"] = 0;
+GUI["Main Executor Frame_c"]["BackgroundColor3"] = Color3.fromRGB(251, 251, 251);
+GUI["Main Executor Frame_c"]["Size"] = UDim2.new(0, 506, 0, 292);
+GUI["Main Executor Frame_c"]["Position"] = UDim2.new(0, 0, 0, 26);
+GUI["Main Executor Frame_c"]["Name"] = [[Main Executor Frame]];
+
+
+-- Players.pun_punPP102030.PlayerGui.ScreenGui.gui.Executor Frame.Main Executor Frame.clear
+GUI["clear_d"] = Instance.new("Frame", GUI["Main Executor Frame_c"]);
+GUI["clear_d"]["BorderSizePixel"] = 0;
+GUI["clear_d"]["BackgroundColor3"] = Color3.fromRGB(251, 251, 251);
+GUI["clear_d"]["Size"] = UDim2.new(0, 40, 0, 70);
+GUI["clear_d"]["Position"] = UDim2.new(0, 342, 0, 86);
+GUI["clear_d"]["Name"] = [[clear]];
+
+
+-- Players.pun_punPP102030.PlayerGui.ScreenGui.gui.Executor Frame.Main Executor Frame.clear.UICorner
+GUI["UICorner_e"] = Instance.new("UICorner", GUI["clear_d"]);
+GUI["UICorner_e"]["CornerRadius"] = UDim.new(0, 3);
+
+
+-- Players.pun_punPP102030.PlayerGui.ScreenGui.gui.Executor Frame.Main Executor Frame.clear.TextButton
+GUI["TextButton_f"] = Instance.new("TextButton", GUI["clear_d"]);
+GUI["TextButton_f"]["BorderSizePixel"] = 0;
+GUI["TextButton_f"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+GUI["TextButton_f"]["BackgroundTransparency"] = 1;
+GUI["TextButton_f"]["Size"] = UDim2.new(0, 40, 0, 70);
+GUI["TextButton_f"]["Text"] = [[CLEAR]];
+
+
+-- Players.pun_punPP102030.PlayerGui.ScreenGui.gui.Executor Frame.Main Executor Frame.clear.UIStroke
+GUI["UIStroke_10"] = Instance.new("UIStroke", GUI["clear_d"]);
+GUI["UIStroke_10"]["Thickness"] = 0.3;
+
+
+-- Players.pun_punPP102030.PlayerGui.ScreenGui.gui.Executor Frame.Main Executor Frame.execute
+GUI["execute_11"] = Instance.new("Frame", GUI["Main Executor Frame_c"]);
+GUI["execute_11"]["BorderSizePixel"] = 0;
+GUI["execute_11"]["BackgroundColor3"] = Color3.fromRGB(251, 251, 251);
+GUI["execute_11"]["Size"] = UDim2.new(0, 40, 0, 72);
+GUI["execute_11"]["Position"] = UDim2.new(0, 342, 0, 6);
+GUI["execute_11"]["Name"] = [[execute]];
+
+
+-- Players.pun_punPP102030.PlayerGui.ScreenGui.gui.Executor Frame.Main Executor Frame.execute.UICorner
+GUI["UICorner_12"] = Instance.new("UICorner", GUI["execute_11"]);
+GUI["UICorner_12"]["CornerRadius"] = UDim.new(0, 3);
+
+
+-- Players.pun_punPP102030.PlayerGui.ScreenGui.gui.Executor Frame.Main Executor Frame.execute.TextButton
+GUI["TextButton_13"] = Instance.new("TextButton", GUI["execute_11"]);
+GUI["TextButton_13"]["BorderSizePixel"] = 0;
+GUI["TextButton_13"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+GUI["TextButton_13"]["BackgroundTransparency"] = 1;
+GUI["TextButton_13"]["Size"] = UDim2.new(0, 40, 0, 72);
+GUI["TextButton_13"]["Text"] = [[EXE]];
+
+
+-- Players.pun_punPP102030.PlayerGui.ScreenGui.gui.Executor Frame.Main Executor Frame.execute.UIStroke
+GUI["UIStroke_14"] = Instance.new("UIStroke", GUI["execute_11"]);
+GUI["UIStroke_14"]["Thickness"] = 0.3;
+
+
+-- Players.pun_punPP102030.PlayerGui.ScreenGui.gui.Executor Frame.Main Executor Frame.output console
+GUI["output console_15"] = Instance.new("Frame", GUI["Main Executor Frame_c"]);
+GUI["output console_15"]["BorderSizePixel"] = 0;
+GUI["output console_15"]["BackgroundColor3"] = Color3.fromRGB(236, 236, 236);
+GUI["output console_15"]["Size"] = UDim2.new(0, 374, 0, 34);
+GUI["output console_15"]["Position"] = UDim2.new(0, 8, 0, 242);
+GUI["output console_15"]["Name"] = [[output console]];
+
+
+-- Players.pun_punPP102030.PlayerGui.ScreenGui.gui.Executor Frame.Main Executor Frame.output console.UICorner
+GUI["UICorner_16"] = Instance.new("UICorner", GUI["output console_15"]);
+GUI["UICorner_16"]["CornerRadius"] = UDim.new(0, 1);
+
+
+-- Players.pun_punPP102030.PlayerGui.ScreenGui.gui.Executor Frame.Main Executor Frame.output console.TextBox
+GUI["TextBox_17"] = Instance.new("TextBox", GUI["output console_15"]);
+GUI["TextBox_17"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+GUI["TextBox_17"]["BorderSizePixel"] = 0;
+GUI["TextBox_17"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+GUI["TextBox_17"]["TextYAlignment"] = Enum.TextYAlignment.Top;
+GUI["TextBox_17"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+GUI["TextBox_17"]["Size"] = UDim2.new(0, 374, 0, 34);
+GUI["TextBox_17"]["Text"] = [[]];
+GUI["TextBox_17"]["BackgroundTransparency"] = 1;
+
+
+-- Players.pun_punPP102030.PlayerGui.ScreenGui.gui.Executor Frame.Main Executor Frame.output console.UIStroke
+GUI["UIStroke_18"] = Instance.new("UIStroke", GUI["output console_15"]);
+GUI["UIStroke_18"]["Thickness"] = 0.3;
+
+
+-- Players.pun_punPP102030.PlayerGui.ScreenGui.gui.Executor Frame.Main Executor Frame.script list
+GUI["script list_19"] = Instance.new("Frame", GUI["Main Executor Frame_c"]);
+GUI["script list_19"]["BorderSizePixel"] = 0;
+GUI["script list_19"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+GUI["script list_19"]["Size"] = UDim2.new(0, 114, 0, 258);
+GUI["script list_19"]["Position"] = UDim2.new(0, 388, 0, 6);
+GUI["script list_19"]["Name"] = [[script list]];
+
+
+-- Players.pun_punPP102030.PlayerGui.ScreenGui.gui.Executor Frame.Main Executor Frame.script list.UICorner
+GUI["UICorner_1a"] = Instance.new("UICorner", GUI["script list_19"]);
+GUI["UICorner_1a"]["CornerRadius"] = UDim.new(0, 1);
+
+
+-- Players.pun_punPP102030.PlayerGui.ScreenGui.gui.Executor Frame.Main Executor Frame.script list.UIStroke
+GUI["UIStroke_1b"] = Instance.new("UIStroke", GUI["script list_19"]);
+GUI["UIStroke_1b"]["Thickness"] = 0.3;
+
+
+-- Players.pun_punPP102030.PlayerGui.ScreenGui.gui.Executor Frame.Main Executor Frame.load ไม่มีประโยชน์มีไว้ตกแต่ง
+GUI["load ไม่มีประโยชน์มีไว้ตกแต่ง_1c"] = Instance.new("Frame", GUI["Main Executor Frame_c"]);
+GUI["load ไม่มีประโยชน์มีไว้ตกแต่ง_1c"]["BorderSizePixel"] = 0;
+GUI["load ไม่มีประโยชน์มีไว้ตกแต่ง_1c"]["BackgroundColor3"] = Color3.fromRGB(251, 251, 251);
+GUI["load ไม่มีประโยชน์มีไว้ตกแต่ง_1c"]["Size"] = UDim2.new(0, 40, 0, 70);
+GUI["load ไม่มีประโยชน์มีไว้ตกแต่ง_1c"]["Position"] = UDim2.new(0, 342, 0, 164);
+GUI["load ไม่มีประโยชน์มีไว้ตกแต่ง_1c"]["Name"] = [[load ไม่มีประโยชน์มีไว้ตกแต่ง]];
+
+
+-- Players.pun_punPP102030.PlayerGui.ScreenGui.gui.Executor Frame.Main Executor Frame.load ไม่มีประโยชน์มีไว้ตกแต่ง.UICorner
+GUI["UICorner_1d"] = Instance.new("UICorner", GUI["load ไม่มีประโยชน์มีไว้ตกแต่ง_1c"]);
+GUI["UICorner_1d"]["CornerRadius"] = UDim.new(0, 3);
+
+
+-- Players.pun_punPP102030.PlayerGui.ScreenGui.gui.Executor Frame.Main Executor Frame.load ไม่มีประโยชน์มีไว้ตกแต่ง.TextButton
+GUI["TextButton_1e"] = Instance.new("TextButton", GUI["load ไม่มีประโยชน์มีไว้ตกแต่ง_1c"]);
+GUI["TextButton_1e"]["BorderSizePixel"] = 0;
+GUI["TextButton_1e"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+GUI["TextButton_1e"]["BackgroundTransparency"] = 1;
+GUI["TextButton_1e"]["Size"] = UDim2.new(0, 40, 0, 70);
+GUI["TextButton_1e"]["Text"] = [[LOAD]];
+
+
+-- Players.pun_punPP102030.PlayerGui.ScreenGui.gui.Executor Frame.Main Executor Frame.load ไม่มีประโยชน์มีไว้ตกแต่ง.UIStroke
+GUI["UIStroke_1f"] = Instance.new("UIStroke", GUI["load ไม่มีประโยชน์มีไว้ตกแต่ง_1c"]);
+GUI["UIStroke_1f"]["Thickness"] = 0.3;
+
+
+-- Players.pun_punPP102030.PlayerGui.ScreenGui.gui.Executor Frame.Main Executor Frame.Button ไม่มีประโยชน์มีไว้ตกแต่ง
+GUI["Button ไม่มีประโยชน์มีไว้ตกแต่ง_20"] = Instance.new("TextButton", GUI["Main Executor Frame_c"]);
+GUI["Button ไม่มีประโยชน์มีไว้ตกแต่ง_20"]["BorderSizePixel"] = 0;
+GUI["Button ไม่มีประโยชน์มีไว้ตกแต่ง_20"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+GUI["Button ไม่มีประโยชน์มีไว้ตกแต่ง_20"]["BackgroundTransparency"] = 1;
+GUI["Button ไม่มีประโยชน์มีไว้ตกแต่ง_20"]["Size"] = UDim2.new(0, 20, 0, 20);
+GUI["Button ไม่มีประโยชน์มีไว้ตกแต่ง_20"]["Text"] = [[>]];
+GUI["Button ไม่มีประโยชน์มีไว้ตกแต่ง_20"]["Name"] = [[Button ไม่มีประโยชน์มีไว้ตกแต่ง]];
+GUI["Button ไม่มีประโยชน์มีไว้ตกแต่ง_20"]["Position"] = UDim2.new(0, 4, 0, 282);
+
+
+-- Players.pun_punPP102030.PlayerGui.ScreenGui.gui.Executor Frame.Main Executor Frame.Button ไม่มีประโยชน์มีไว้ตกแต่ง.Frame
+GUI["Frame_21"] = Instance.new("Frame", GUI["Button ไม่มีประโยชน์มีไว้ตกแต่ง_20"]);
+GUI["Frame_21"]["BorderSizePixel"] = 0;
+GUI["Frame_21"]["BackgroundColor3"] = Color3.fromRGB(251, 251, 251);
+GUI["Frame_21"]["Size"] = UDim2.new(0, 480, 0, 20);
+GUI["Frame_21"]["Position"] = UDim2.new(0, 20, 0, 0);
+
+
+-- Players.pun_punPP102030.PlayerGui.ScreenGui.gui.Executor Frame.Main Executor Frame.Button ไม่มีประโยชน์มีไว้ตกแต่ง.Frame.UICorner
+GUI["UICorner_22"] = Instance.new("UICorner", GUI["Frame_21"]);
+GUI["UICorner_22"]["CornerRadius"] = UDim.new(0, 1);
+
+
+-- Players.pun_punPP102030.PlayerGui.ScreenGui.gui.Executor Frame.Main Executor Frame.Button ไม่มีประโยชน์มีไว้ตกแต่ง.Frame.TextBox
+GUI["TextBox_23"] = Instance.new("TextBox", GUI["Frame_21"]);
+GUI["TextBox_23"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+GUI["TextBox_23"]["BorderSizePixel"] = 0;
+GUI["TextBox_23"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+GUI["TextBox_23"]["Size"] = UDim2.new(0, 480, 0, 20);
+GUI["TextBox_23"]["Text"] = [[]];
+GUI["TextBox_23"]["BackgroundTransparency"] = 1;
+
+
+-- Players.pun_punPP102030.PlayerGui.ScreenGui.gui.Executor Frame.Main Executor Frame.Button ไม่มีประโยชน์มีไว้ตกแต่ง.Frame.UIStroke
+GUI["UIStroke_24"] = Instance.new("UIStroke", GUI["Frame_21"]);
+GUI["UIStroke_24"]["Thickness"] = 0.3;
+
+
+-- Players.pun_punPP102030.PlayerGui.ScreenGui.gui.Executor Frame.Main Executor Frame.Frame
+GUI["Frame_25"] = Instance.new("Frame", GUI["Main Executor Frame_c"]);
+GUI["Frame_25"]["BorderSizePixel"] = 0;
+GUI["Frame_25"]["BackgroundColor3"] = Color3.fromRGB(226, 226, 226);
+GUI["Frame_25"]["Size"] = UDim2.new(0, 334, 0, 228);
+GUI["Frame_25"]["Position"] = UDim2.new(0, 4, 0, 6);
+
+
+-- Players.pun_punPP102030.PlayerGui.ScreenGui.gui.Executor Frame.Main Executor Frame.Frame.UICorner
+GUI["UICorner_26"] = Instance.new("UICorner", GUI["Frame_25"]);
+GUI["UICorner_26"]["CornerRadius"] = UDim.new(0, 1);
+
+
+-- Players.pun_punPP102030.PlayerGui.ScreenGui.gui.Executor Frame.Main Executor Frame.Frame.TextLabel
+GUI["TextLabel_27"] = Instance.new("TextLabel", GUI["Frame_25"]);
+GUI["TextLabel_27"]["BorderSizePixel"] = 0;
+GUI["TextLabel_27"]["TextSize"] = 10;
+GUI["TextLabel_27"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+GUI["TextLabel_27"]["TextYAlignment"] = Enum.TextYAlignment.Top;
+GUI["TextLabel_27"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+GUI["TextLabel_27"]["BackgroundTransparency"] = 1;
+GUI["TextLabel_27"]["Size"] = UDim2.new(0, 316, 0, 204);
+GUI["TextLabel_27"]["Text"] = [[1]];
+GUI["TextLabel_27"]["Position"] = UDim2.new(0, 4, 0, 0);
+
+
+-- Players.pun_punPP102030.PlayerGui.ScreenGui.gui.Executor Frame.Main Executor Frame.Frame.TextBox
+GUI["TextBox_28"] = Instance.new("TextBox", GUI["Frame_25"]);
+GUI["TextBox_28"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+GUI["TextBox_28"]["BorderSizePixel"] = 0;
+GUI["TextBox_28"]["TextSize"] = 10;
+GUI["TextBox_28"]["TextYAlignment"] = Enum.TextYAlignment.Top;
+GUI["TextBox_28"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+GUI["TextBox_28"]["Size"] = UDim2.new(0, 318, 0, 228);
+GUI["TextBox_28"]["Position"] = UDim2.new(0, 14, 0, 0);
+GUI["TextBox_28"]["Text"] = [[]];
+
+
+-- Players.pun_punPP102030.PlayerGui.ScreenGui.gui.Executor Frame.Main Executor Frame.Frame.UIStroke
+GUI["UIStroke_29"] = Instance.new("UIStroke", GUI["Frame_25"]);
+GUI["UIStroke_29"]["Thickness"] = 0.5;
+
+
+-- Players.pun_punPP102030.PlayerGui.ScreenGui.gui.Executor Frame.ไม่มีประโยชน์มีไว้ตกแต่ง
+GUI["ไม่มีประโยชน์มีไว้ตกแต่ง_2a"] = Instance.new("Frame", GUI["Executor Frame_8"]);
+GUI["ไม่มีประโยชน์มีไว้ตกแต่ง_2a"]["BorderSizePixel"] = 0;
+GUI["ไม่มีประโยชน์มีไว้ตกแต่ง_2a"]["BackgroundColor3"] = Color3.fromRGB(251, 251, 251);
+GUI["ไม่มีประโยชน์มีไว้ตกแต่ง_2a"]["Size"] = UDim2.new(0, 38, 0, 18);
+GUI["ไม่มีประโยชน์มีไว้ตกแต่ง_2a"]["Position"] = UDim2.new(0, 344, 0, 4);
+GUI["ไม่มีประโยชน์มีไว้ตกแต่ง_2a"]["Name"] = [[ไม่มีประโยชน์มีไว้ตกแต่ง]];
+
+
+-- Players.pun_punPP102030.PlayerGui.ScreenGui.gui.Executor Frame.ไม่มีประโยชน์มีไว้ตกแต่ง.UICorner
+GUI["UICorner_2b"] = Instance.new("UICorner", GUI["ไม่มีประโยชน์มีไว้ตกแต่ง_2a"]);
+GUI["UICorner_2b"]["CornerRadius"] = UDim.new(0, 3);
+
+
+-- Players.pun_punPP102030.PlayerGui.ScreenGui.gui.Executor Frame.ไม่มีประโยชน์มีไว้ตกแต่ง.TextButton
+GUI["TextButton_2c"] = Instance.new("TextButton", GUI["ไม่มีประโยชน์มีไว้ตกแต่ง_2a"]);
+GUI["TextButton_2c"]["BorderSizePixel"] = 0;
+GUI["TextButton_2c"]["BackgroundColor3"] = Color3.fromRGB(251, 251, 251);
+GUI["TextButton_2c"]["BackgroundTransparency"] = 1;
+GUI["TextButton_2c"]["Size"] = UDim2.new(0, 38, 0, 18);
+GUI["TextButton_2c"]["Text"] = [[DIAL]];
+
+
+-- Players.pun_punPP102030.PlayerGui.ScreenGui.gui.Executor Frame.ไม่มีประโยชน์มีไว้ตกแต่ง.UIStroke
+GUI["UIStroke_2d"] = Instance.new("UIStroke", GUI["ไม่มีประโยชน์มีไว้ตกแต่ง_2a"]);
+GUI["UIStroke_2d"]["Thickness"] = 0.3;
+
+
+-- Players.pun_punPP102030.PlayerGui.ScreenGui.gui.Executor Frame.ไม่มีประโยชน์มีไว้ตกแต่ง
+GUI["ไม่มีประโยชน์มีไว้ตกแต่ง_2e"] = Instance.new("Frame", GUI["Executor Frame_8"]);
+GUI["ไม่มีประโยชน์มีไว้ตกแต่ง_2e"]["BorderSizePixel"] = 0;
+GUI["ไม่มีประโยชน์มีไว้ตกแต่ง_2e"]["BackgroundColor3"] = Color3.fromRGB(251, 251, 251);
+GUI["ไม่มีประโยชน์มีไว้ตกแต่ง_2e"]["Size"] = UDim2.new(0, 52, 0, 18);
+GUI["ไม่มีประโยชน์มีไว้ตกแต่ง_2e"]["Position"] = UDim2.new(0, 0, 0, 8);
+GUI["ไม่มีประโยชน์มีไว้ตกแต่ง_2e"]["Name"] = [[ไม่มีประโยชน์มีไว้ตกแต่ง]];
+
+
+-- Players.pun_punPP102030.PlayerGui.ScreenGui.gui.Executor Frame.ไม่มีประโยชน์มีไว้ตกแต่ง.UICorner
+GUI["UICorner_2f"] = Instance.new("UICorner", GUI["ไม่มีประโยชน์มีไว้ตกแต่ง_2e"]);
+GUI["UICorner_2f"]["CornerRadius"] = UDim.new(0, 2);
+
+
+-- Players.pun_punPP102030.PlayerGui.ScreenGui.gui.Executor Frame.ไม่มีประโยชน์มีไว้ตกแต่ง.TextLabel
+GUI["TextLabel_30"] = Instance.new("TextLabel", GUI["ไม่มีประโยชน์มีไว้ตกแต่ง_2e"]);
+GUI["TextLabel_30"]["BorderSizePixel"] = 0;
+GUI["TextLabel_30"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+GUI["TextLabel_30"]["BackgroundTransparency"] = 1;
+GUI["TextLabel_30"]["Size"] = UDim2.new(0, 52, 0, 18);
+GUI["TextLabel_30"]["Text"] = [[Executor]];
+
+
+-- Players.pun_punPP102030.PlayerGui.ScreenGui.gui.Executor Frame.พับ gui เหมือนกัน
+GUI["พับ gui เหมือนกัน_31"] = Instance.new("Frame", GUI["Executor Frame_8"]);
+GUI["พับ gui เหมือนกัน_31"]["BorderSizePixel"] = 0;
+GUI["พับ gui เหมือนกัน_31"]["BackgroundColor3"] = Color3.fromRGB(251, 251, 251);
+GUI["พับ gui เหมือนกัน_31"]["Size"] = UDim2.new(0, 36, 0, 18);
+GUI["พับ gui เหมือนกัน_31"]["Position"] = UDim2.new(0, 388, 0, 4);
+GUI["พับ gui เหมือนกัน_31"]["Name"] = [[พับ gui เหมือนกัน]];
+
+
+-- Players.pun_punPP102030.PlayerGui.ScreenGui.gui.Executor Frame.พับ gui เหมือนกัน.UICorner
+GUI["UICorner_32"] = Instance.new("UICorner", GUI["พับ gui เหมือนกัน_31"]);
+GUI["UICorner_32"]["CornerRadius"] = UDim.new(0, 3);
+
+
+-- Players.pun_punPP102030.PlayerGui.ScreenGui.gui.Executor Frame.พับ gui เหมือนกัน.TextButton
+GUI["TextButton_33"] = Instance.new("TextButton", GUI["พับ gui เหมือนกัน_31"]);
+GUI["TextButton_33"]["BorderSizePixel"] = 0;
+GUI["TextButton_33"]["BackgroundColor3"] = Color3.fromRGB(251, 251, 251);
+GUI["TextButton_33"]["BackgroundTransparency"] = 1;
+GUI["TextButton_33"]["Size"] = UDim2.new(0, 36, 0, 18);
+GUI["TextButton_33"]["Text"] = [[HIDE]];
+
+
+-- Players.pun_punPP102030.PlayerGui.ScreenGui.gui.Executor Frame.พับ gui เหมือนกัน.UIStroke
+GUI["UIStroke_34"] = Instance.new("UIStroke", GUI["พับ gui เหมือนกัน_31"]);
+GUI["UIStroke_34"]["Thickness"] = 0.3;
+
+
+-- Players.pun_punPP102030.PlayerGui.ScreenGui.gui.Executor Frame.dex
+GUI["dex_35"] = Instance.new("Frame", GUI["Executor Frame_8"]);
+GUI["dex_35"]["BorderSizePixel"] = 0;
+GUI["dex_35"]["BackgroundColor3"] = Color3.fromRGB(251, 251, 251);
+GUI["dex_35"]["Size"] = UDim2.new(0, 40, 0, 18);
+GUI["dex_35"]["Position"] = UDim2.new(0, 462, 0, 4);
+GUI["dex_35"]["Name"] = [[dex]];
+
+
+-- Players.pun_punPP102030.PlayerGui.ScreenGui.gui.Executor Frame.dex.UICorner
+GUI["UICorner_36"] = Instance.new("UICorner", GUI["dex_35"]);
+GUI["UICorner_36"]["CornerRadius"] = UDim.new(0, 3);
+
+
+-- Players.pun_punPP102030.PlayerGui.ScreenGui.gui.Executor Frame.dex.TextButton
+GUI["TextButton_37"] = Instance.new("TextButton", GUI["dex_35"]);
+GUI["TextButton_37"]["BorderSizePixel"] = 0;
+GUI["TextButton_37"]["BackgroundColor3"] = Color3.fromRGB(251, 251, 251);
+GUI["TextButton_37"]["BackgroundTransparency"] = 1;
+GUI["TextButton_37"]["Size"] = UDim2.new(0, 40, 0, 18);
+GUI["TextButton_37"]["Text"] = [[DEX]];
+
+
+-- Players.pun_punPP102030.PlayerGui.ScreenGui.gui.Executor Frame.dex.UIStroke
+GUI["UIStroke_38"] = Instance.new("UIStroke", GUI["dex_35"]);
+GUI["UIStroke_38"]["Thickness"] = 0.3;
+
+
+-- Players.pun_punPP102030.PlayerGui.ScreenGui.gui.Executor Frame.r6
+GUI["r6_39"] = Instance.new("Frame", GUI["Executor Frame_8"]);
+GUI["r6_39"]["BorderSizePixel"] = 0;
+GUI["r6_39"]["BackgroundColor3"] = Color3.fromRGB(251, 251, 251);
+GUI["r6_39"]["Size"] = UDim2.new(0, 26, 0, 18);
+GUI["r6_39"]["Position"] = UDim2.new(0, 430, 0, 4);
+GUI["r6_39"]["Name"] = [[r6]];
+
+
+-- Players.pun_punPP102030.PlayerGui.ScreenGui.gui.Executor Frame.r6.UICorner
+GUI["UICorner_3a"] = Instance.new("UICorner", GUI["r6_39"]);
+GUI["UICorner_3a"]["CornerRadius"] = UDim.new(0, 3);
+
+
+-- Players.pun_punPP102030.PlayerGui.ScreenGui.gui.Executor Frame.r6.TextButton
+GUI["TextButton_3b"] = Instance.new("TextButton", GUI["r6_39"]);
+GUI["TextButton_3b"]["BorderSizePixel"] = 0;
+GUI["TextButton_3b"]["BackgroundColor3"] = Color3.fromRGB(251, 251, 251);
+GUI["TextButton_3b"]["BackgroundTransparency"] = 1;
+GUI["TextButton_3b"]["Size"] = UDim2.new(0, 26, 0, 18);
+GUI["TextButton_3b"]["Text"] = [[R6]];
+
+
+-- Players.pun_punPP102030.PlayerGui.ScreenGui.gui.Executor Frame.r6.UIStroke
+GUI["UIStroke_3c"] = Instance.new("UIStroke", GUI["r6_39"]);
+GUI["UIStroke_3c"]["Thickness"] = 0.3;
+
+
+-- Players.pun_punPP102030.PlayerGui.ScreenGui.gui.Button ปุ่มปิดไปเลย
+GUI["Button ปุ่มปิดไปเลย_3d"] = Instance.new("TextButton", GUI["gui_2"]);
+GUI["Button ปุ่มปิดไปเลย_3d"]["BorderSizePixel"] = 0;
+GUI["Button ปุ่มปิดไปเลย_3d"]["TextSize"] = 10;
+GUI["Button ปุ่มปิดไปเลย_3d"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+GUI["Button ปุ่มปิดไปเลย_3d"]["BackgroundTransparency"] = 1;
+GUI["Button ปุ่มปิดไปเลย_3d"]["Size"] = UDim2.new(0, 22, 0, 28);
+GUI["Button ปุ่มปิดไปเลย_3d"]["Text"] = [[x]];
+GUI["Button ปุ่มปิดไปเลย_3d"]["Name"] = [[Button ปุ่มปิดไปเลย]];
+GUI["Button ปุ่มปิดไปเลย_3d"]["Position"] = UDim2.new(0, 476, 0, 0);
+
+
+-- Players.pun_punPP102030.PlayerGui.ScreenGui.gui.Image logo
+GUI["Image logo_3e"] = Instance.new("ImageLabel", GUI["gui_2"]);
+GUI["Image logo_3e"]["BorderSizePixel"] = 0;
+GUI["Image logo_3e"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+-- GUI["Image logo_3e"]["ImageContent"] = ;
+GUI["Image logo_3e"]["Image"] = [[rbxassetid://140087577897173]];
+GUI["Image logo_3e"]["Size"] = UDim2.new(0, 16, 0, 16);
+GUI["Image logo_3e"]["Name"] = [[Image logo]];
+GUI["Image logo_3e"]["Position"] = UDim2.new(0, 8, 0, 6);
+
+
+-- Players.pun_punPP102030.PlayerGui.ScreenGui.gui.Image logo.UICorner
+GUI["UICorner_3f"] = Instance.new("UICorner", GUI["Image logo_3e"]);
+
+
+
