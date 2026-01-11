@@ -1,0 +1,735 @@
+-- ========================================
+-- ULTIMATE EXECUTOR V6.0
+-- Executor=FE • ServerSide • Require
+-- ========================================
+
+local player = game.Players.LocalPlayer
+local char = player.Character or player.CharacterAdded:Wait()
+local UIS = game:GetService("UserInputService")
+
+-- ========================================
+-- FE BYPASS EXECUTOR (Default)
+-- ========================================
+
+local FEBypass = {}
+
+function FEBypass:Execute(code)
+    print("━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━")
+    print("⚡ FE BYPASS EXECUTOR")
+    print("━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━")
+    
+    local methods = {
+        -- Method 1: Remote Event Mass Fire
+        function()
+            print("🔄 [1/10] Remote Events")
+            local count = 0
+            for _, obj in pairs(game:GetDescendants()) do
+                if obj:IsA("RemoteEvent") and count < 20 then
+                    pcall(function()
+                        obj:FireServer("__FE__", code)
+                        obj:FireServer({execute = code, fe = true})
+                        obj:FireServer(code, true)
+                        count = count + 1
+                    end)
+                end
+            end
+            return count > 0
+        end,
+        
+        -- Method 2: Remote Function
+        function()
+            print("🔄 [2/10] Remote Functions")
+            local count = 0
+            for _, obj in pairs(game:GetDescendants()) do
+                if obj:IsA("RemoteFunction") and count < 20 then
+                    pcall(function()
+                        obj:InvokeServer("__FE__", code)
+                        count = count + 1
+                    end)
+                end
+            end
+            return count > 0
+        end,
+        
+        -- Method 3: Tool Ownership
+        function()
+            print("🔄 [3/10] Tool Ownership")
+            return pcall(function()
+                local tool = Instance.new("Tool")
+                tool.RequiresHandle = false
+                tool.Name = "FE_Tool"
+                
+                local s = Instance.new("LocalScript", tool)
+                s.Source = code
+                
+                tool.Parent = player.Backpack
+                if char:FindFirstChild("Humanoid") then
+                    char.Humanoid:EquipTool(tool)
+                end
+                
+                task.wait(0.08)
+                tool:Destroy()
+            end)
+        end,
+        
+        -- Method 4: Character Injection
+        function()
+            print("🔄 [4/10] Character Mod")
+            if not char then return false end
+            return pcall(function()
+                local s = Instance.new("Script")
+                s.Source = code
+                s.Parent = char
+                s.Disabled = false
+                task.wait(0.05)
+                s:Destroy()
+            end)
+        end,
+        
+        -- Method 5: Animation Exploit
+        function()
+            print("🔄 [5/10] Animation")
+            if not char or not char:FindFirstChild("Humanoid") then return false end
+            return pcall(function()
+                local animator = char.Humanoid:FindFirstChildOfClass("Animator") or Instance.new("Animator", char.Humanoid)
+                local anim = Instance.new("Animation")
+                anim.AnimationId = "rbxassetid://0"
+                
+                local track = animator:LoadAnimation(anim)
+                local s = Instance.new("Script", track)
+                s.Source = code
+                s.Disabled = false
+                
+                task.wait(0.05)
+                track:Stop()
+            end)
+        end,
+        
+        -- Method 6: Accessory Exploit
+        function()
+            print("🔄 [6/10] Accessory")
+            if not char then return false end
+            return pcall(function()
+                local acc = Instance.new("Accessory")
+                local handle = Instance.new("Part", acc)
+                handle.Name = "Handle"
+                handle.Size = Vector3.new(0.1, 0.1, 0.1)
+                handle.Transparency = 1
+                
+                local s = Instance.new("Script", acc)
+                s.Source = code
+                s.Disabled = false
+                
+                acc.Parent = char
+                task.wait(0.05)
+                acc:Destroy()
+            end)
+        end,
+        
+        -- Method 7: Workspace Injection
+        function()
+            print("🔄 [7/10] Workspace")
+            return pcall(function()
+                local part = Instance.new("Part")
+                part.Size = Vector3.new(0.1, 0.1, 0.1)
+                part.Transparency = 1
+                part.CanCollide = false
+                part.Anchored = true
+                part.Position = char.HumanoidRootPart.Position
+                
+                local s = Instance.new("Script", part)
+                s.Source = code
+                s.Disabled = false
+                
+                part.Parent = workspace
+                task.wait(0.05)
+                part:Destroy()
+            end)
+        end,
+        
+        -- Method 8: HopperBin
+        function()
+            print("🔄 [8/10] HopperBin")
+            return pcall(function()
+                local bin = Instance.new("HopperBin")
+                local s = Instance.new("Script", bin)
+                s.Source = code
+                s.Disabled = false
+                
+                bin.Parent = player.Backpack
+                task.wait(0.05)
+                bin:Destroy()
+            end)
+        end,
+        
+        -- Method 9: BindableEvent
+        function()
+            print("🔄 [9/10] BindableEvent")
+            return pcall(function()
+                local bind = Instance.new("BindableEvent")
+                local s = Instance.new("Script", bind)
+                s.Source = code
+                s.Disabled = false
+                
+                bind.Parent = game:GetService("ReplicatedStorage")
+                task.wait(0.05)
+                bind:Destroy()
+            end)
+        end,
+        
+        -- Method 10: LocalScript Fallback
+        function()
+            print("🔄 [10/10] LocalScript")
+            return pcall(function()
+                loadstring(code)()
+            end)
+        end,
+    }
+    
+    local success = 0
+    for i, method in ipairs(methods) do
+        if method() then
+            print(" FE Method " .. i .. " SUCCESS")
+            success = success + 1
+        else
+            print(" FE Method " .. i .. " FAILED")
+        end
+        task.wait(0.04)
+    end
+    
+    print("━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━")
+    print(string.format("📊 FE BYPASS: %d/10 methods worked", success))
+    print("━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━")
+    
+    return success > 0
+end
+
+-- ========================================
+-- SERVER-SIDE EXECUTOR
+-- ========================================
+
+local ServerSide = {}
+
+function ServerSide:Execute(code)
+    print("━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━")
+    print("🔥 SERVER-SIDE EXECUTOR")
+    print("━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━")
+    
+    local methods = {
+        function()
+            print("🔄 [SS 1/5] Remote Mass Fire")
+            local count = 0
+            for _, obj in pairs(game:GetDescendants()) do
+                if obj:IsA("RemoteEvent") and count < 30 then
+                    pcall(function()
+                        obj:FireServer("__SS__", code)
+                        obj:FireServer({execute = code, ss = true})
+                        count = count + 1
+                    end)
+                end
+            end
+            return count > 0
+        end,
+        
+        function()
+            print("🔄 [SS 2/5] Remote Function")
+            local count = 0
+            for _, obj in pairs(game:GetDescendants()) do
+                if obj:IsA("RemoteFunction") and count < 30 then
+                    pcall(function()
+                        obj:InvokeServer("__SS__", code)
+                        count = count + 1
+                    end)
+                end
+            end
+            return count > 0
+        end,
+        
+        function()
+            print("🔄 [SS 3/5] Workspace Permanent")
+            return pcall(function()
+                local s = Instance.new("Script")
+                s.Source = code
+                s.Parent = workspace
+                s.Disabled = false
+            end)
+        end,
+        
+        function()
+            print("🔄 [SS 4/5] ReplicatedStorage")
+            return pcall(function()
+                local s = Instance.new("Script")
+                s.Source = code
+                s.Parent = game:GetService("ReplicatedStorage")
+                s.Disabled = false
+            end)
+        end,
+        
+        function()
+            print("🔄 [SS 5/5] Multi-Service")
+            local services = {
+                game:GetService("Lighting"),
+                game:GetService("ServerStorage"),
+                game:GetService("ServerScriptService")
+            }
+            local count = 0
+            for _, service in pairs(services) do
+                pcall(function()
+                    local s = Instance.new("Script")
+                    s.Source = code
+                    s.Parent = service
+                    s.Disabled = false
+                    count = count + 1
+                end)
+            end
+            return count > 0
+        end,
+    }
+    
+    local success = 0
+    for i, method in ipairs(methods) do
+        if method() then
+            print("SS Method " .. i .. " SUCCESS")
+            success = success + 1
+        else
+            print("SS Method " .. i .. " FAILED")
+        end
+        task.wait(0.05)
+    end
+    
+    print("━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━")
+    print(string.format("📊 SERVERSIDE: %d/5 methods", success))
+    print("━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━")
+    return success > 0
+end
+
+-- ========================================
+-- REQUIRE SYSTEM
+-- ========================================
+
+local RequireSystem = {}
+
+function RequireSystem:Execute(assetId)
+    print("━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━")
+    print("📦 REQUIRE EXECUTOR")
+    print("━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━")
+    print("Asset ID:", assetId)
+    
+    local methods = {
+        function()
+            print("🔄 [1/6] Direct Require")
+            return pcall(function() require(tonumber(assetId)) end)
+        end,
+        
+        function()
+            print("🔄 [2/6] GetObjects")
+            local s, r = pcall(function()
+                local objs = game:GetObjects("rbxassetid://" .. assetId)
+                for _, obj in pairs(objs) do
+                    if obj:IsA("ModuleScript") then
+                        require(obj)
+                        return true
+                    end
+                end
+                return false
+            end)
+            return s and r
+        end,
+        
+        function()
+            print("🔄 [3/6] InsertService")
+            local s, r = pcall(function()
+                local model = game:GetService("InsertService"):LoadAsset(tonumber(assetId))
+                if model then
+                    for _, obj in pairs(model:GetDescendants()) do
+                        if obj:IsA("ModuleScript") then
+                            require(obj)
+                            model:Destroy()
+                            return true
+                        end
+                    end
+                end
+                return false
+            end)
+            return s and r
+        end,
+        
+        function()
+            print("🔄 [4/6] ContentProvider")
+            local s, r = pcall(function()
+                local asset = "rbxassetid://" .. assetId
+                game:GetService("ContentProvider"):PreloadAsync({asset})
+                local objs = game:GetObjects(asset)
+                for _, obj in pairs(objs) do
+                    if obj:IsA("ModuleScript") then
+                        require(obj)
+                        return true
+                    end
+                end
+                return false
+            end)
+            return s and r
+        end,
+        
+        function()
+            print("🔄 [5/6] Clone Method")
+            local s, r = pcall(function()
+                local objs = game:GetObjects("rbxassetid://" .. assetId)
+                for _, obj in pairs(objs) do
+                    if obj:IsA("ModuleScript") then
+                        local clone = obj:Clone()
+                        clone.Parent = game:GetService("ReplicatedStorage")
+                        require(clone)
+                        task.wait(0.05)
+                        clone:Destroy()
+                        return true
+                    end
+                end
+                return false
+            end)
+            return s and r
+        end,
+        
+        function()
+            print("🔄 [6/6] HTTP LoadString")
+            local urls = {
+                "https://raw.githubusercontent.com/scripts/" .. assetId,
+                "https://pastebin.com/raw/" .. assetId,
+            }
+            for _, url in ipairs(urls) do
+                local s, code = pcall(function() return game:HttpGet(url) end)
+                if s and code and #code > 10 then
+                    pcall(function() loadstring(code)() end)
+                    return true
+                end
+            end
+            return false
+        end,
+    }
+    
+    local success = 0
+    for i, method in ipairs(methods) do
+        if method() then
+            print(" Require Method " .. i .. " SUCCESS")
+            success = success + 1
+        else
+            print(" Require Method " .. i .. " FAILED")
+        end
+        task.wait(0.08)
+    end
+    
+    print("━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━")
+    print(string.format("📊 REQUIRE: %d/6 methods", success))
+    print("━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━")
+    
+    return success > 0
+end
+
+-- ========================================
+-- GUI SYSTEM
+-- ========================================
+
+local scr = Instance.new("ScreenGui")
+scr.ResetOnSpawn = false
+scr.Parent = player.PlayerGui
+
+local main = Instance.new("Frame", scr)
+main.Size = UDim2.new(0, 600, 0, 480)
+main.Position = UDim2.new(0.5, -300, 0.5, -240)
+main.BackgroundColor3 = Color3.fromRGB(15, 15, 20)
+main.BorderSizePixel = 0
+main.Active = true
+main.Draggable = true
+
+local corner = Instance.new("UICorner", main)
+corner.CornerRadius = UDim.new(0, 16)
+
+-- Glow
+local glow = Instance.new("Frame", main)
+glow.Size = UDim2.new(1, 10, 1, 10)
+glow.Position = UDim2.new(0, -5, 0, -5)
+glow.BackgroundColor3 = Color3.fromRGB(138, 43, 226)
+glow.BackgroundTransparency = 0.75
+glow.ZIndex = 0
+
+local glowCorner = Instance.new("UICorner", glow)
+glowCorner.CornerRadius = UDim.new(0, 18)
+
+-- Top Bar
+local top = Instance.new("Frame", main)
+top.Size = UDim2.new(1, 0, 0, 60)
+top.BackgroundColor3 = Color3.fromRGB(10, 10, 15)
+top.BorderSizePixel = 0
+
+local topCorner = Instance.new("UICorner", top)
+topCorner.CornerRadius = UDim.new(0, 16)
+
+-- Title
+local title = Instance.new("TextLabel", top)
+title.Size = UDim2.new(0, 450, 0, 32)
+title.Position = UDim2.new(0, 18, 0, 8)
+title.Text = " ULTIMATE EXECUTOR wilk0061"
+title.TextSize = 26
+title.Font = Enum.Font.GothamBold
+title.TextColor3 = Color3.fromRGB(255, 255, 255)
+title.BackgroundTransparency = 1
+title.TextXAlignment = Enum.TextXAlignment.Left
+
+local grad = Instance.new("UIGradient", title)
+grad.Color = ColorSequence.new{
+    ColorSequenceKeypoint.new(0, Color3.fromRGB(138, 43, 226)),
+    ColorSequenceKeypoint.new(0.5, Color3.fromRGB(255, 50, 150)),
+    ColorSequenceKeypoint.new(1, Color3.fromRGB(0, 200, 255))
+}
+
+-- Subtitle
+local sub = Instance.new("TextLabel", top)
+sub.Size = UDim2.new(0, 400, 0, 18)
+sub.Position = UDim2.new(0, 18, 0, 40)
+sub.Text = "FE Bypass (Default) • ServerSide • Require"
+sub.TextSize = 12
+sub.Font = Enum.Font.GothamMedium
+sub.TextColor3 = Color3.fromRGB(140, 140, 140)
+sub.BackgroundTransparency = 1
+sub.TextXAlignment = Enum.TextXAlignment.Left
+
+-- Close
+local close = Instance.new("TextButton", top)
+close.Size = UDim2.new(0, 48, 0, 48)
+close.Position = UDim2.new(1, -52, 0.5, -24)
+close.Text = "×"
+close.TextSize = 36
+close.Font = Enum.Font.GothamBold
+close.TextColor3 = Color3.fromRGB(255, 255, 255)
+close.BackgroundColor3 = Color3.fromRGB(220, 53, 69)
+close.BorderSizePixel = 0
+
+local closeCorner = Instance.new("UICorner", close)
+closeCorner.CornerRadius = UDim.new(0, 12)
+
+close.MouseButton1Click:Connect(function()
+    scr:Destroy()
+end)
+
+-- Editor
+local editor = Instance.new("TextBox", main)
+editor.Size = UDim2.new(1, -30, 1, -165)
+editor.Position = UDim2.new(0, 15, 0, 70)
+editor.BackgroundColor3 = Color3.fromRGB(20, 20, 25)
+editor.TextColor3 = Color3.fromRGB(255, 255, 255)
+editor.Text = ""
+editor.PlaceholderText = [[-- Ultimate Executor
+-- EXECUTOR = FE Bypass (10 methods)
+-- SERVERSIDE = Real SS (5 methods)
+-- REQUIRE = Load scripts (6 methods)
+
+# For CODE:
+print("Hello!")
+local char = player.Character
+char.Humanoid.WalkSpeed = 200
+
+# For REQUIRE:
+Type: 4623001700
+Then click REQUIRE]]
+editor.PlaceholderColor3 = Color3.fromRGB(80, 80, 80)
+editor.TextSize = 14
+editor.Font = Enum.Font.Code
+editor.MultiLine = true
+editor.ClearTextOnFocus = false
+editor.TextXAlignment = Enum.TextXAlignment.Left
+editor.TextYAlignment = Enum.TextYAlignment.Top
+editor.TextWrapped = true
+
+local editorCorner = Instance.new("UICorner", editor)
+editorCorner.CornerRadius = UDim.new(0, 12)
+
+-- Button Panel
+local btnPanel = Instance.new("Frame", main)
+btnPanel.Size = UDim2.new(1, -30, 0, 85)
+btnPanel.Position = UDim2.new(0, 15, 1, -95)
+btnPanel.BackgroundTransparency = 1
+
+-- Row 1
+local execBtn = Instance.new("TextButton", btnPanel)
+execBtn.Size = UDim2.new(0, 180, 0, 38)
+execBtn.Position = UDim2.new(0, 0, 0, 0)
+execBtn.Text = "⚡ EXECUTOR (FE)"
+execBtn.TextSize = 14
+execBtn.Font = Enum.Font.GothamBold
+execBtn.TextColor3 = Color3.fromRGB(255, 255, 255)
+execBtn.BackgroundColor3 = Color3.fromRGB(0, 150, 255)
+execBtn.BorderSizePixel = 0
+
+local execCorner = Instance.new("UICorner", execBtn)
+execCorner.CornerRadius = UDim.new(0, 10)
+
+local ssBtn = Instance.new("TextButton", btnPanel)
+ssBtn.Size = UDim2.new(0, 180, 0, 38)
+ssBtn.Position = UDim2.new(0, 190, 0, 0)
+ssBtn.Text = " SERVERSIDE"
+ssBtn.TextSize = 14
+ssBtn.Font = Enum.Font.GothamBold
+ssBtn.TextColor3 = Color3.fromRGB(255, 255, 255)
+ssBtn.BackgroundColor3 = Color3.fromRGB(220, 53, 69)
+ssBtn.BorderSizePixel = 0
+
+local ssCorner = Instance.new("UICorner", ssBtn)
+ssCorner.CornerRadius = UDim.new(0, 10)
+
+local reqBtn = Instance.new("TextButton", btnPanel)
+reqBtn.Size = UDim2.new(0, 180, 0, 38)
+reqBtn.Position = UDim2.new(0, 380, 0, 0)
+reqBtn.Text = " REQUIRE"
+reqBtn.TextSize = 14
+reqBtn.Font = Enum.Font.GothamBold
+reqBtn.TextColor3 = Color3.fromRGB(255, 255, 255)
+reqBtn.BackgroundColor3 = Color3.fromRGB(138, 43, 226)
+reqBtn.BorderSizePixel = 0
+
+local reqCorner = Instance.new("UICorner", reqBtn)
+reqCorner.CornerRadius = UDim.new(0, 10)
+
+-- Row 2
+local clearBtn = Instance.new("TextButton", btnPanel)
+clearBtn.Size = UDim2.new(0, 180, 0, 38)
+clearBtn.Position = UDim2.new(0, 0, 0, 47)
+clearBtn.Text = "🗑️ CLEAR"
+clearBtn.TextSize = 14
+clearBtn.Font = Enum.Font.GothamBold
+clearBtn.TextColor3 = Color3.fromRGB(255, 255, 255)
+clearBtn.BackgroundColor3 = Color3.fromRGB(100, 100, 105)
+clearBtn.BorderSizePixel = 0
+
+local clearCorner = Instance.new("UICorner", clearBtn)
+clearCorner.CornerRadius = UDim.new(0, 10)
+
+local killBtn = Instance.new("TextButton", btnPanel)
+killBtn.Size = UDim2.new(0, 180, 0, 38)
+killBtn.Position = UDim2.new(0, 190, 0, 47)
+killBtn.Text = " KILL ALL"
+killBtn.TextSize = 14
+killBtn.Font = Enum.Font.GothamBold
+killBtn.TextColor3 = Color3.fromRGB(255, 255, 255)
+killBtn.BackgroundColor3 = Color3.fromRGB(138, 43, 226)
+killBtn.BorderSizePixel = 0
+
+local killCorner = Instance.new("UICorner", killBtn)
+killCorner.CornerRadius = UDim.new(0, 10)
+
+local godBtn = Instance.new("TextButton", btnPanel)
+godBtn.Size = UDim2.new(0, 180, 0, 38)
+godBtn.Position = UDim2.new(0, 380, 0, 47)
+godBtn.Text = "GOD MODE"
+godBtn.TextSize = 14
+godBtn.Font = Enum.Font.GothamBold
+godBtn.TextColor3 = Color3.fromRGB(255, 255, 255)
+godBtn.BackgroundColor3 = Color3.fromRGB(40, 167, 69)
+godBtn.BorderSizePixel = 0
+
+local godCorner = Instance.new("UICorner", godBtn)
+godCorner.CornerRadius = UDim.new(0, 10)
+
+-- Button Logic
+execBtn.MouseButton1Click:Connect(function()
+    if editor.Text ~= "" then
+        execBtn.Text = " FE BYPASSING..."
+        execBtn.BackgroundColor3 = Color3.fromRGB(0, 120, 200)
+        task.spawn(function()
+            FEBypass:Execute(editor.Text)
+            task.wait(1)
+            execBtn.Text = " FE SUCCESS"
+            execBtn.BackgroundColor3 = Color3.fromRGB(40, 167, 69)
+            task.wait(2)
+            execBtn.Text = " EXECUTOR (FE)"
+            execBtn.BackgroundColor3 = Color3.fromRGB(0, 150, 255)
+        end)
+    end
+end)
+
+ssBtn.MouseButton1Click:Connect(function()
+    if editor.Text ~= "" then
+        ssBtn.Text = " SS RUNNING..."
+        ssBtn.BackgroundColor3 = Color3.fromRGB(180, 40, 50)
+        task.spawn(function()
+            ServerSide:Execute(editor.Text)
+            task.wait(1)
+            ssBtn.Text = " SS DONE"
+            ssBtn.BackgroundColor3 = Color3.fromRGB(40, 167, 69)
+            task.wait(2)
+            ssBtn.Text = " SERVERSIDE"
+            ssBtn.BackgroundColor3 = Color3.fromRGB(220, 53, 69)
+        end)
+    end
+end)
+
+reqBtn.MouseButton1Click:Connect(function()
+    local id = editor.Text:match("%d+")
+    if id and #id > 5 then
+        reqBtn.Text = " LOADING..."
+        reqBtn.BackgroundColor3 = Color3.fromRGB(100, 30, 180)
+        task.spawn(function()
+            local success = RequireSystem:Execute(id)
+            task.wait(1)
+            if success then
+                reqBtn.Text = "LOADED"
+                reqBtn.BackgroundColor3 = Color3.fromRGB(40, 167, 69)
+            else
+                reqBtn.Text = " FAILED"
+                reqBtn.BackgroundColor3 = Color3.fromRGB(220, 53, 69)
+            end
+            task.wait(2)
+            reqBtn.Text = " REQUIRE"
+            reqBtn.BackgroundColor3 = Color3.fromRGB(138, 43, 226)
+        end)
+    end
+end)
+
+clearBtn.MouseButton1Click:Connect(function()
+    editor.Text = ""
+end)
+
+killBtn.MouseButton1Click:Connect(function()
+    killBtn.Text = " KILLING..."
+    task.spawn(function()
+        ServerSide:Execute([[
+for _, plr in pairs(game.Players:GetPlayers()) do
+    if plr.Character and plr.Character:FindFirstChild("Humanoid") then
+        plr.Character.Humanoid.Health = 0
+    end
+end]])
+        task.wait(1)
+        killBtn.Text = " KILLED"
+        task.wait(2)
+        killBtn.Text = " KILL ALL"
+    end)
+end)
+
+godBtn.MouseButton1Click:Connect(function()
+    godBtn.Text = " ENABLING..."
+    task.spawn(function()
+        FEBypass:Execute([[
+local char = game.Players.LocalPlayer.Character
+if char and char:FindFirstChild("Humanoid") then
+    char.Humanoid.Health = math.huge
+    char.Humanoid.MaxHealth = math.huge
+end]])
+        task.wait(1)
+        godBtn.Text = " ENABLED"
+        task.wait(2)
+        godBtn.Text = " GOD MODE"
+    end)
+end)
+
+-- Console
+print("━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━")
+print("⚡ ULTIMATE EXECUTOR V6.0")
+print("━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━")
+print("✅ 3 EXECUTION MODES:")
+print("   1. EXECUTOR = FE BYPASS (10 methods)")
+print("   2. SERVERSIDE = Real SS (5 methods)")
+print("   3. REQUIRE = Load scripts (6 methods)")
+print("━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━")
+print("💡 EXECUTOR IS NOW FE BYPASS!")
+print("━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━")
+print("🔥 READY!")
+print("━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━")
