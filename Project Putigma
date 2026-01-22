@@ -1,0 +1,215 @@
+local Players = game:GetService("Players")
+local player = Players.LocalPlayer
+local StarterGui = game:GetService("StarterGui")
+
+if player:WaitForChild("PlayerGui"):FindFirstChild("Putigma") then
+	player.PlayerGui.Putigma:Destroy()
+end
+
+local elysian = Instance.new("ScreenGui")
+elysian.Name = "Putigma"
+elysian.Parent = player:WaitForChild("PlayerGui")
+elysian.ResetOnSpawn = false
+
+local Frame = Instance.new("Frame")
+Frame.Parent = elysian
+Frame.Active = true
+Frame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Frame.Position = UDim2.new(0.5, -313, 0.5, -190)
+Frame.Size = UDim2.new(0, 627, 0, 381)
+Frame.Draggable = true
+
+local TextLabel = Instance.new("TextLabel")
+TextLabel.Parent = Frame
+TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.BorderSizePixel = 0
+TextLabel.Position = UDim2.new(0.047846891, 0, 0, 0)
+TextLabel.Size = UDim2.new(0, 597, 0, 22)
+TextLabel.Font = Enum.Font.SourceSans
+TextLabel.Text = "Putigma"
+TextLabel.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel.TextSize = 14.000
+TextLabel.TextXAlignment = Enum.TextXAlignment.Left
+
+local image = Instance.new("ImageLabel")
+image.Parent = Frame
+image.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+image.BorderSizePixel = 0
+image.Size = UDim2.new(0, 23, 0, 22)
+image.Image = "rbxassetid://96254927950057"
+
+local TextBox = Instance.new("TextBox")
+TextBox.Parent = Frame
+TextBox.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextBox.BorderSizePixel = 1 
+TextBox.BorderColor3 = Color3.fromRGB(0, 0, 0) 
+TextBox.Position = UDim2.new(0.0159489624, 0, 0.144356951, 0)
+TextBox.Size = UDim2.new(0, 464, 0, 193)
+TextBox.ClearTextOnFocus = false
+TextBox.Font = Enum.Font.SourceSans
+TextBox.MultiLine = true
+TextBox.TextWrapped = true 
+TextBox.ClipsDescendants = true 
+TextBox.Text = "Press 'Execute' to run scripts..."
+TextBox.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextBox.TextSize = 14.000
+TextBox.TextXAlignment = Enum.TextXAlignment.Left
+TextBox.TextYAlignment = Enum.TextYAlignment.Top
+
+local elysian_2 = Instance.new("TextButton")
+elysian_2.Name = "elysian"
+elysian_2.Parent = Frame
+elysian_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+elysian_2.BorderSizePixel = 0
+elysian_2.Position = UDim2.new(0, 0, 0.076115489, 0)
+elysian_2.Size = UDim2.new(0, 88, 0, 18)
+elysian_2.Font = Enum.Font.SourceSans
+elysian_2.Text = "Executor"
+elysian_2.TextColor3 = Color3.fromRGB(0, 0, 0)
+elysian_2.TextSize = 14.000
+
+local view = Instance.new("TextButton")
+view.Name = "view"
+view.Parent = Frame
+view.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+view.BorderSizePixel = 0
+view.Position = UDim2.new(0.140350878, 0, 0.076115489, 0)
+view.Size = UDim2.new(0, 88, 0, 18)
+view.Font = Enum.Font.SourceSans
+view.Text = "View"
+view.TextColor3 = Color3.fromRGB(0, 0, 0)
+view.TextSize = 14.000
+view.TextXAlignment = Enum.TextXAlignment.Left
+
+local outputContainer = Instance.new("ScrollingFrame")
+outputContainer.Parent = Frame
+outputContainer.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+outputContainer.Position = UDim2.new(0.248803824, 0, 0.669291317, 0)
+outputContainer.Size = UDim2.new(0, 326, 0, 116)
+outputContainer.ScrollBarThickness = 13
+outputContainer.CanvasSize = UDim2.new(0, 0, 0, 200)
+outputContainer.VerticalScrollBarInset = Enum.ScrollBarInset.Always
+
+local output = Instance.new("TextLabel")
+output.Parent = outputContainer
+output.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+output.Size = UDim2.new(1, 0, 1, 0)
+output.Font = Enum.Font.SourceSans
+output.Text = "Ready..."
+output.TextColor3 = Color3.fromRGB(0, 0, 0)
+output.TextSize = 14.000
+output.TextWrapped = true
+output.TextXAlignment = Enum.TextXAlignment.Left
+output.TextYAlignment = Enum.TextYAlignment.Top
+
+local execute = Instance.new("TextButton")
+execute.Name = "execute"
+execute.Parent = Frame
+execute.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+execute.Position = UDim2.new(0.0159489624, 0, 0.685039341, 0)
+execute.Size = UDim2.new(0, 137, 0, 27)
+execute.Font = Enum.Font.SourceSans
+execute.Text = "Execute"
+execute.TextColor3 = Color3.fromRGB(0, 0, 0)
+execute.TextSize = 14.000
+
+local clear = Instance.new("TextButton")
+clear.Name = "clear"
+clear.Parent = Frame
+clear.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+clear.Position = UDim2.new(0.0159489624, 0, 0.790026248, 0)
+clear.Size = UDim2.new(0, 137, 0, 23)
+clear.Font = Enum.Font.SourceSans
+clear.Text = "Clear"
+clear.TextColor3 = Color3.fromRGB(0, 0, 0)
+clear.TextSize = 14.000
+
+execute.MouseButton1Click:Connect(function()
+	local code = TextBox.Text
+	if code and code ~= "" and code ~= "Press 'Execute' to run scripts..." then
+		output.Text = "Executing script..."
+		local success, err = pcall(function()
+			loadstring(code)()
+		end)
+		if not success then
+			output.Text = "Error: " .. err
+		else
+			output.Text = "Script executed successfully."
+		end
+	else
+		output.Text = "Please enter a script to execute."
+	end
+end)
+
+clear.MouseButton1Click:Connect(function()
+	TextBox.Text = ""
+	output.Text = "Output cleared."
+end)
+
+view.MouseButton1Click:Connect(function()
+	pcall(function()
+		StarterGui:SetCore("DevConsoleVisible", true)
+		output.Text = "Developer Console Opened."
+	end)
+end)
+
+local scriptlist = Instance.new("ScrollingFrame")
+scriptlist.Name = "scriptlist"
+scriptlist.Parent = Frame
+scriptlist.Active = true
+scriptlist.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+scriptlist.Position = UDim2.new(0.768740058, 0, 0.144356951, 0)
+scriptlist.Size = UDim2.new(0, 145, 0, 316)
+scriptlist.HorizontalScrollBarInset = Enum.ScrollBarInset.Always
+scriptlist.ScrollBarThickness = 13
+
+local listLayout = Instance.new("UIListLayout")
+listLayout.Parent = scriptlist
+listLayout.SortOrder = Enum.SortOrder.LayoutOrder
+listLayout.Padding = UDim.new(0, 2)
+
+local buttonsData = {
+	{Title="Infinite Yield",URL="https://rawscripts.net/raw/Universal-Script-Infinite-yield-Game-commands-etc-14971"},
+	{Title="Dex Explorer",URL="https://rawscripts.net/raw/Universal-Script-Dark-Dex-Explorer-19291"},
+	{Title="1x1x1x1 Skid GUI",URL="https://rawscripts.net/raw/Natural-Disaster-Survival-1X1X1X1-GUI-PLS-LIKE-11504"},
+	{Title="1x1x1x1 Blue GUI",URL="https://rawscripts.net/raw/Universal-Script-1x1x1x1-blue-gui-21876"},
+	{Title="c00lgui",URL="https://raw.githubusercontent.com/MiRw3b/c00lgui-v3rx/main/c00lguiv3rx.lua"},
+	{Title="Ligma",URL="https://pastebin.com/raw/MUfsexG1"},
+	{Title="Project Stigma",URL="https://rawscripts.net/raw/Universal-Script-Project-stigma-by-my-friend-jointeamck-9367"},
+	{Title="Rc7",URL="https://pastebin.com/raw/b787QKMQ"},
+	{Title="Ro Xploit",URL="https://pastebin.com/raw/0hryQeGw"},
+	{Title="SF",URL="https://raw.githubusercontent.com/g00byd0lanxdd/SF-1.5-MOBILE/refs/heads/main/SF%201.5%20MOBILE"},
+	{Title="BiPolaria",URL="https://pastebin.com/raw/8qFWEtWY"},
+	{Title="luau x ss v5",URL="https://rawscripts.net/raw/Universal-Script-Luau-X-SS-V5-rework-50365"},
+	{Title="ssp",URL="https://pastefy.app/XHqVeb0d/raw"},
+	{Title="ExSer",URL="https://pastefy.app/7sO8ckTL/raw"},
+	{Title="Project Primalia SS",URL="https://rawscripts.net/raw/Universal-Script-Project-Primalia-SS-63706"},
+	{Title="venguim",URL="https://pastefy.app/j3yyullx/raw"},
+	{Title="KlausGui ss",URL="https://pastebin.com/raw/Y0CYLJ6z"},
+	{Title="Ro Xploit tiny",URL="https://raw.githubusercontent.com/Kroostal/Ro-Xploittinyhub/refs/heads/main/RoXploit%20TinyHub"},
+	{Title="Polaria",URL="https://pastefy.app/agqEB2qs/raw"},
+	{Title="luau x ss v3",URL="https://raw.githubusercontent.com/gojohdkaisenkt2/Gojohdkaisenkt-/refs/heads/main/L"},
+	{Title="project broken spawn",URL="https://pastebin.com/raw/NyJfL0ey"},
+}
+
+local buttonHeight = 23
+local totalHeight = #buttonsData * (buttonHeight + 2)
+scriptlist.CanvasSize = UDim2.new(0, 0, 0, totalHeight)
+
+for i, data in ipairs(buttonsData) do
+	local btn = Instance.new("TextButton")
+	btn.Parent = scriptlist
+	btn.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	btn.Size = UDim2.new(1, -10, 0, buttonHeight)
+	btn.Font = Enum.Font.SourceSans
+	btn.Text = data.Title
+	btn.TextColor3 = Color3.fromRGB(0, 0, 0)
+	btn.TextSize = 14.000
+	
+	btn.MouseButton1Click:Connect(function()
+		output.Text = "Executing: " .. data.Title
+		pcall(function()
+			loadstring(game:HttpGet(data.URL))()
+		end)
+	end)
+end
