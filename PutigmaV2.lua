@@ -263,7 +263,7 @@ local buttonsData = {
 	{Title="RC7",URL="https://pastebin.com/raw/b787QKMQ"},
 	{Title="Ro Xploit",URL="https://pastebin.com/raw/0hryQeGw"},
     {Title="Trowhack backdoor",URL="https://raw.githubusercontent.com/TrowHack/scripts/refs/heads/roblox/backdoor.lua"},
-    {Title="Lalolhub backdoor",URL="https://raw.githubusercontent.com/Its-LALOL/LALOL-Hub/main/Backdoor-Scanner/script"},
+    {Title="Punpun backdoor",URL="https://pastefy.app/5I28X4ds/raw"},
     {Title="Moon backdoor",URL="https://raw.githubusercontent.com/G4mg1/main/refs/heads/main/README.md"},
 	{Title="SF Mobile",URL="https://raw.githubusercontent.com/g00byd0lanxdd/SF-1.5-MOBILE/refs/heads/main/SF%201.5%20MOBILE"},
 	{Title="BiPolaria",URL="https://pastebin.com/raw/8qFWEtWY"},
