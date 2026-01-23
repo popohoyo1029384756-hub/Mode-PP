@@ -7,7 +7,7 @@ if player:WaitForChild("PlayerGui"):FindFirstChild("Putigma") then
 end
 
 local elysian = Instance.new("ScreenGui")
-elysian.Name = "Putigma"
+elysian.Name = "Erasedcitizen_Rc7"
 elysian.Parent = player:WaitForChild("PlayerGui")
 elysian.ResetOnSpawn = false
 
@@ -26,7 +26,7 @@ TextLabel.BorderSizePixel = 0
 TextLabel.Position = UDim2.new(0.047846891, 0, 0, 0)
 TextLabel.Size = UDim2.new(0, 597, 0, 22)
 TextLabel.Font = Enum.Font.SourceSans
-TextLabel.Text = "Putigma"
+TextLabel.Text = "Erasedcitizen_Rc7"
 TextLabel.TextColor3 = Color3.fromRGB(0, 0, 0)
 TextLabel.TextSize = 14.000
 TextLabel.TextXAlignment = Enum.TextXAlignment.Left
@@ -36,7 +36,7 @@ image.Parent = Frame
 image.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 image.BorderSizePixel = 0
 image.Size = UDim2.new(0, 23, 0, 22)
-image.Image = "rbxassetid://96254927950057"
+image.Image = "rbxassetid://6582205597"
 
 local TextBox = Instance.new("TextBox")
 TextBox.Parent = Frame
@@ -190,6 +190,8 @@ local buttonsData = {
 	{Title="Polaria",URL="https://pastefy.app/agqEB2qs/raw"},
 	{Title="luau x ss v3",URL="https://raw.githubusercontent.com/gojohdkaisenkt2/Gojohdkaisenkt-/refs/heads/main/L"},
 	{Title="project broken spawn",URL="https://pastebin.com/raw/NyJfL0ey"},
+{Title="project Erasedcitizen_Rc7 1",URL="https://pastefy.app/XHAw1PmE/raw"},
+{Title="project broken spawn",URL="https://pastebin.com/raw/NyJfL0ey"},
 }
 
 local buttonHeight = 23
