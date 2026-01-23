@@ -1,0 +1,296 @@
+local Players = game:GetService("Players")
+local player = Players.LocalPlayer
+local UserInputService = game:GetService("UserInputService")
+local TweenService = game:GetService("TweenService")
+local StarterGui = game:GetService("StarterGui")
+
+if player:WaitForChild("PlayerGui"):FindFirstChild("Putigma") then
+	player.PlayerGui.Putigma:Destroy()
+end
+
+local ScreenGui = Instance.new("ScreenGui")
+ScreenGui.Name = "Putigma"
+ScreenGui.Parent = player:WaitForChild("PlayerGui")
+ScreenGui.ResetOnSpawn = false
+ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+local Frame = Instance.new("Frame")
+Frame.Name = "Frame"
+Frame.Parent = ScreenGui
+Frame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Frame.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Frame.BorderSizePixel = 0
+Frame.Position = UDim2.new(0.5, -245, 0.5, -170)
+Frame.Size = UDim2.new(0, 490, 0, 27)
+Frame.Active = true
+Frame.Draggable = true
+
+local MainFrame = Instance.new("Frame")
+MainFrame.Name = "MainFrame"
+MainFrame.Parent = Frame
+MainFrame.BackgroundColor3 = Color3.fromRGB(234, 234, 234)
+MainFrame.BorderColor3 = Color3.fromRGB(0, 0, 0)
+MainFrame.BorderSizePixel = 0
+MainFrame.Position = UDim2.new(0, 0, 1, 0)
+MainFrame.Size = UDim2.new(0, 490, 0, 314)
+
+local ImageLabel = Instance.new("ImageLabel")
+ImageLabel.Parent = Frame
+ImageLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ImageLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ImageLabel.BorderSizePixel = 0
+ImageLabel.Position = UDim2.new(0.02, 0, 0.15, 0)
+ImageLabel.Size = UDim2.new(0, 20, 0, 20)
+ImageLabel.Image = "rbxassetid://96254927950057"
+
+local Title = Instance.new("TextLabel")
+Title.Name = "Title"
+Title.Parent = Frame
+Title.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Title.BackgroundTransparency = 1.000
+Title.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Title.BorderSizePixel = 0
+Title.Position = UDim2.new(0.08, 0, 0.15, 0)
+Title.Size = UDim2.new(0, 150, 0, 21)
+Title.Font = Enum.Font.SourceSans
+Title.Text = "Putigma V2"
+Title.TextColor3 = Color3.fromRGB(0, 0, 0)
+Title.TextSize = 16.000
+Title.TextWrapped = true
+Title.TextXAlignment = Enum.TextXAlignment.Left
+
+local close = Instance.new("TextButton")
+close.Name = "close"
+close.Parent = Frame
+close.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+close.BackgroundTransparency = 1.000
+close.Position = UDim2.new(0.797959208, 0, 0, 0)
+close.Size = UDim2.new(0, 37, 0, 27)
+close.Font = Enum.Font.SourceSans
+close.Text = "-"
+close.TextColor3 = Color3.fromRGB(0, 0, 0)
+close.TextSize = 18.000
+
+local bigger_dontwork = Instance.new("TextButton")
+bigger_dontwork.Name = "bigger_dontwork"
+bigger_dontwork.Parent = Frame
+bigger_dontwork.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+bigger_dontwork.BackgroundTransparency = 1
+bigger_dontwork.Position = UDim2.new(0.873469412, 0, 0, 0)
+bigger_dontwork.Size = UDim2.new(0, 33, 0, 25)
+bigger_dontwork.Font = Enum.Font.SourceSans
+bigger_dontwork.Text = "[]"
+bigger_dontwork.TextColor3 = Color3.fromRGB(198, 198, 198)
+bigger_dontwork.TextSize = 14.000
+
+local Remove = Instance.new("TextButton")
+Remove.Name = "Remove"
+Remove.Parent = Frame
+Remove.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Remove.BackgroundTransparency = 1
+Remove.Position = UDim2.new(0.940816343, 0, 0, 0)
+Remove.Size = UDim2.new(0, 29, 0, 23)
+Remove.Font = Enum.Font.SourceSans
+Remove.Text = "x"
+Remove.TextColor3 = Color3.fromRGB(0, 0, 0)
+Remove.TextSize = 14.000
+
+local ExecutorFrame = Instance.new("Frame")
+ExecutorFrame.Name = "ExecutorFrame"
+ExecutorFrame.Parent = Frame
+ExecutorFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ExecutorFrame.BorderColor3 = Color3.fromRGB(124, 124, 124)
+ExecutorFrame.Position = UDim2.new(0.0139535712, 0, 1.85185182, 0)
+ExecutorFrame.Size = UDim2.new(0, 483, 0, 291)
+
+local FrameK = Instance.new("ScrollingFrame")
+FrameK.Name = "FrameK"
+FrameK.Parent = ExecutorFrame
+FrameK.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+FrameK.BorderColor3 = Color3.fromRGB(124, 124, 124)
+FrameK.Position = UDim2.new(1, -125, 0.05, 0) 
+FrameK.Size = UDim2.new(0, 115, 0, 262)
+FrameK.ScrollBarThickness = 6
+
+local TextBox = Instance.new("TextBox")
+TextBox.Parent = ExecutorFrame
+TextBox.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextBox.BorderColor3 = Color3.fromRGB(124, 124, 124)
+TextBox.Position = UDim2.new(0.013, 0, 0.052, 0)
+TextBox.Size = UDim2.new(0, 345, 0, 155)
+TextBox.ClearTextOnFocus = false
+TextBox.Font = Enum.Font.SourceSans
+TextBox.MultiLine = true
+TextBox.Text = "-- Put scripts here"
+TextBox.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextBox.TextSize = 14.000
+TextBox.TextWrapped = true
+TextBox.ClipsDescendants = true
+TextBox.TextXAlignment = Enum.TextXAlignment.Left
+TextBox.TextYAlignment = Enum.TextYAlignment.Top
+
+local Execute = Instance.new("TextButton")
+Execute.Name = "Execute"
+Execute.Parent = ExecutorFrame
+Execute.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Execute.BorderColor3 = Color3.fromRGB(124, 124, 124)
+Execute.Position = UDim2.new(0.015, 0, 0.607, 0)
+Execute.Size = UDim2.new(0, 110, 0, 29)
+Execute.Font = Enum.Font.SourceSans
+Execute.Text = "Execute"
+Execute.TextColor3 = Color3.fromRGB(0, 0, 0)
+Execute.TextSize = 14.000
+
+local Clear = Instance.new("TextButton")
+Clear.Name = "Clear"
+Clear.Parent = ExecutorFrame
+Clear.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Clear.BorderColor3 = Color3.fromRGB(124, 124, 124)
+Clear.Position = UDim2.new(0.015, 0, 0.731, 0)
+Clear.Size = UDim2.new(0, 110, 0, 29)
+Clear.Font = Enum.Font.SourceSans
+Clear.Text = "Clear"
+Clear.TextColor3 = Color3.fromRGB(0, 0, 0)
+Clear.TextSize = 14.000
+
+local File = Instance.new("TextButton")
+File.Name = "File"
+File.Parent = ExecutorFrame
+File.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+File.BorderColor3 = Color3.fromRGB(124, 124, 124)
+File.Position = UDim2.new(0.015, 0, 0.853, 0)
+File.Size = UDim2.new(0, 110, 0, 29)
+File.Font = Enum.Font.SourceSans
+File.Text = "File"
+File.TextColor3 = Color3.fromRGB(0, 0, 0)
+File.TextSize = 14.000
+
+local Outputithink = Instance.new("TextBox")
+Outputithink.Name = "Outputithink"
+Outputithink.Parent = ExecutorFrame
+Outputithink.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Outputithink.BorderColor3 = Color3.fromRGB(124, 124, 124)
+Outputithink.Position = UDim2.new(0.27, 0, 0.604, 0)
+Outputithink.Size = UDim2.new(0, 220, 0, 101)
+Outputithink.Font = Enum.Font.SourceSans
+Outputithink.Text = "Ready..."
+Outputithink.TextColor3 = Color3.fromRGB(0, 0, 0)
+Outputithink.TextSize = 14.000
+Outputithink.TextXAlignment = Enum.TextXAlignment.Left
+Outputithink.TextYAlignment = Enum.TextYAlignment.Top
+Outputithink.TextEditable = false
+Outputithink.TextWrapped = true
+Outputithink.MultiLine = true
+Outputithink.ClipsDescendants = true
+
+local ExecutorTab = Instance.new("TextButton")
+ExecutorTab.Name = "Executor"
+ExecutorTab.Parent = Frame
+ExecutorTab.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ExecutorTab.BorderColor3 = Color3.fromRGB(124, 124, 124)
+ExecutorTab.Position = UDim2.new(0.0135440128, 0, 1.22222221, 0)
+ExecutorTab.Size = UDim2.new(0, 45, 0, 17)
+ExecutorTab.Font = Enum.Font.SourceSans
+ExecutorTab.Text = "Executor"
+ExecutorTab.TextColor3 = Color3.fromRGB(0, 0, 0)
+ExecutorTab.TextSize = 14.000
+
+local ViewTab = Instance.new("TextButton")
+ViewTab.Name = "View"
+ViewTab.Parent = Frame
+ViewTab.BackgroundColor3 = Color3.fromRGB(218, 218, 218)
+ViewTab.BorderColor3 = Color3.fromRGB(124, 124, 124)
+ViewTab.Position = UDim2.new(0.105380744, 0, 1.22222221, 0)
+ViewTab.Size = UDim2.new(0, 45, 0, 17)
+ViewTab.Font = Enum.Font.SourceSans
+ViewTab.Text = "View"
+ViewTab.TextColor3 = Color3.fromRGB(0, 0, 0)
+ViewTab.TextSize = 14.000
+
+Remove.MouseButton1Click:Connect(function()
+	ScreenGui:Destroy()
+end)
+
+close.MouseButton1Click:Connect(function() end)
+bigger_dontwork.MouseButton1Click:Connect(function() end)
+File.MouseButton1Click:Connect(function() end)
+
+ViewTab.MouseButton1Click:Connect(function()
+	ViewTab.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	task.wait(0.1)
+	ViewTab.BackgroundColor3 = Color3.fromRGB(218, 218, 218)
+	
+	pcall(function()
+		StarterGui:SetCore("DevConsoleVisible", true)
+		Outputithink.Text = "Developer Console Opened."
+	end)
+end)
+
+local function executeScript(code)
+	Outputithink.Text = "Executing..."
+	local success, err = pcall(function()
+		loadstring(code)()
+	end)
+	if success then
+		Outputithink.Text = "Success!"
+	else
+		Outputithink.Text = "Error: " .. err
+	end
+end
+
+Execute.MouseButton1Click:Connect(function()
+	executeScript(TextBox.Text)
+end)
+
+Clear.MouseButton1Click:Connect(function()
+	TextBox.Text = ""
+	Outputithink.Text = "Cleared."
+end)
+
+local listLayout = Instance.new("UIListLayout")
+listLayout.Parent = FrameK
+listLayout.SortOrder = Enum.SortOrder.LayoutOrder
+listLayout.Padding = UDim.new(0, 2)
+
+local buttonsData = {
+	{Title="Infinite Yield",URL="https://rawscripts.net/raw/Universal-Script-Infinite-yield-Game-commands-etc-14971"},
+	{Title="Dex Explorer",URL="https://rawscripts.net/raw/Universal-Script-Dark-Dex-Explorer-19291"},
+	{Title="1x1x1x1 Skid",URL="https://rawscripts.net/raw/Natural-Disaster-Survival-1X1X1X1-GUI-PLS-LIKE-11504"},
+	{Title="1x1x1x1 Blue",URL="https://rawscripts.net/raw/Universal-Script-1x1x1x1-blue-gui-21876"},
+	{Title="c00lgui",URL="https://raw.githubusercontent.com/MiRw3b/c00lgui-v3rx/main/c00lguiv3rx.lua"},
+	{Title="Ligma",URL="https://pastebin.com/raw/MUfsexG1"},
+	{Title="Project Stigma",URL="https://rawscripts.net/raw/Universal-Script-Project-stigma-by-my-friend-jointeamck-9367"},
+	{Title="RC7",URL="https://pastebin.com/raw/b787QKMQ"},
+	{Title="Ro Xploit",URL="https://pastebin.com/raw/0hryQeGw"},
+	{Title="SF Mobile",URL="https://raw.githubusercontent.com/g00byd0lanxdd/SF-1.5-MOBILE/refs/heads/main/SF%201.5%20MOBILE"},
+	{Title="BiPolaria",URL="https://pastebin.com/raw/8qFWEtWY"},
+	{Title="Luau X SS v5",URL="https://rawscripts.net/raw/Universal-Script-Luau-X-SS-V5-rework-50365"},
+	{Title="SSP",URL="https://pastefy.app/XHqVeb0d/raw"},
+	{Title="ExSer",URL="https://pastefy.app/7sO8ckTL/raw"},
+	{Title="Project Primalia",URL="https://rawscripts.net/raw/Universal-Script-Project-Primalia-SS-63706"},
+	{Title="Venguim",URL="https://pastefy.app/j3yyullx/raw"},
+	{Title="KlausGui",URL="https://pastebin.com/raw/Y0CYLJ6z"},
+	{Title="Ro Xploit Tiny",URL="https://raw.githubusercontent.com/Kroostal/Ro-Xploittinyhub/refs/heads/main/RoXploit%20TinyHub"},
+	{Title="Polaria",URL="https://pastefy.app/agqEB2qs/raw"},
+	{Title="Luau X SS v3",URL="https://raw.githubusercontent.com/gojohdkaisenkt2/Gojohdkaisenkt-/refs/heads/main/L"},
+	{Title="Broken Spawn",URL="https://pastebin.com/raw/NyJfL0ey"},
+}
+
+FrameK.CanvasSize = UDim2.new(0, 0, 0, #buttonsData * 25)
+
+for i, data in ipairs(buttonsData) do
+	local btn = Instance.new("TextButton")
+	btn.Parent = FrameK
+	btn.BackgroundColor3 = Color3.fromRGB(240, 240, 240)
+	btn.BorderColor3 = Color3.fromRGB(200, 200, 200)
+	btn.Size = UDim2.new(1, -6, 0, 23)
+	btn.Font = Enum.Font.SourceSans
+	btn.Text = data.Title
+	btn.TextColor3 = Color3.fromRGB(0, 0, 0)
+	btn.TextSize = 12.000
+	
+	btn.MouseButton1Click:Connect(function()
+		Outputithink.Text = "Exec: " .. data.Title
+		executeScript('loadstring(game:HttpGet("'..data.URL..'"))()')
+	end)
+end
