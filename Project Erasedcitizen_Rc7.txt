@@ -190,8 +190,8 @@ local buttonsData = {
 	{Title="Polaria",URL="https://pastefy.app/agqEB2qs/raw"},
 	{Title="luau x ss v3",URL="https://raw.githubusercontent.com/gojohdkaisenkt2/Gojohdkaisenkt-/refs/heads/main/L"},
 	{Title="project broken spawn",URL="https://pastebin.com/raw/NyJfL0ey"},
-{Title="project Erasedcitizen_Rc7 1",URL="https://pastefy.app/XHAw1PmE/raw"},
-{Title="project broken spawn",URL="https://pastebin.com/raw/NyJfL0ey"},
+    {Title="XHAW1PME",URL="https://pastefy.app/XHAw1PmE/raw"},
+    {Title="c00lgui Rc7",URL="https://rawscripts.net/raw/Universal-Script-c00lgui-mobile-edition-from-GitHub-not-mine-80639"},
 }
 
 local buttonHeight = 23
