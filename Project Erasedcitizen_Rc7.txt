@@ -191,10 +191,10 @@ local buttonsData = {
 	{Title="luau x ss v3",URL="https://raw.githubusercontent.com/gojohdkaisenkt2/Gojohdkaisenkt-/refs/heads/main/L"},
 	{Title="project broken spawn",URL="https://pastebin.com/raw/NyJfL0ey"},
     {Title="XHAW1PME",URL="https://pastefy.app/XHAw1PmE/raw"},
-    
-{Title="c00lgui Rc7",URL="https://rawscripts.net/raw/Universal-Script-c00lgui-mobile-edition-from-GitHub-not-mine-80639"},
-{Title="Trowhack backdoor",URL="https://raw.githubusercontent.com/TrowHack/scripts/refs/heads/roblox/backdoor.lua"},
-{Title="",URL=""},
+    {Title="c00lgui Rc7",URL="https://rawscripts.net/raw/Universal-Script-c00lgui-mobile-edition-from-GitHub-not-mine-80639"},
+    {Title="Trowhack backdoor",URL="https://raw.githubusercontent.com/TrowHack/scripts/refs/heads/roblox/backdoor.lua"},
+    {Title="Lalolhub backdoor",URL="https://raw.githubusercontent.com/Its-LALOL/LALOL-Hub/main/Backdoor-Scanner/script"},
+    {Title="Moon backdoor",URL="https://raw.githubusercontent.com/G4mg1/main/refs/heads/main/README.md"},
 }
 
 local buttonHeight = 23
