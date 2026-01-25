@@ -24,8 +24,11 @@ G2L["5"] = Instance.new("UICorner", G2L["2"]);
 G2L["6"] = Instance.new("Folder", G2L["2"]);
 G2L["6"]["Name"] = [[Executor]];
 
-G2L["67"] = Instance.new("UIStroke", G2L["7","b"]);
+G2L["67"] = Instance.new("UIStroke", G2L["7"]);
 G2L["67"]["Color"] = Color3.fromRGB(0, 0, 0);
+
+G2L["671"] = Instance.new("UIStroke", G2L["b"]);
+G2L["671"]["Color"] = Color3.fromRGB(0, 0, 0);
 
 -- StarterGui.LALOL Hub Backdoor.Frame.Executor.Execute
 G2L["7"] = Instance.new("Frame", G2L["6"]);
@@ -122,7 +125,12 @@ G2L["16"]["Name"] = [[Scanner]];
 G2L["1121"] = Instance.new("UIStroke", G2L["16"]);
 G2L["1121"]["Color"] = Color3.fromRGB(0, 0, 0);
 
-G2L["1123"] = Instance.new("UICorner", G2L["16","1a"]);
+G2L["1123"] = Instance.new("UICorner", G2L["16"]);
+
+G2L["1121"] = Instance.new("UIStroke", G2L["1a"]);
+G2L["1121"]["Color"] = Color3.fromRGB(0, 0, 0);
+
+G2L["1124"] = Instance.new("UICorner", G2L["1a"]);
 
 -- StarterGui.LALOL Hub Backdoor.Frame.Scanner.Button
 G2L["1a"] = Instance.new("TextButton", G2L["16"]);
