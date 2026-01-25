@@ -24,7 +24,7 @@ G2L["5"] = Instance.new("UICorner", G2L["2"]);
 G2L["6"] = Instance.new("Folder", G2L["2"]);
 G2L["6"]["Name"] = [[Executor]];
 
-G2L["67"] = Instance.new("UIStroke", G2L["6"]);
+G2L["67"] = Instance.new("UIStroke", G2L["7","b"]);
 G2L["67"]["Color"] = Color3.fromRGB(0, 0, 0);
 
 -- StarterGui.LALOL Hub Backdoor.Frame.Executor.Execute
@@ -90,7 +90,7 @@ G2L["11"]["Position"] = UDim2.new(0.015692640095949173, 0, 0.042270027101039886,
 G2L["11"]["ClearTextOnFocus"] = false;
 
 G2L["112"] = Instance.new("UIStroke", G2L["f"]);
-G2L["112"]["Color"] = Color3.fromRGB(255, 255, 255);
+G2L["112"]["Color"] = Color3.fromRGB(0, 0, 0);
 
 G2L["113"] = Instance.new("UICorner", G2L["f"]);
 
@@ -119,6 +119,11 @@ G2L["16"]["Position"] = UDim2.new(0.1166670024394989, 0, 0.30478382110595703, 0)
 G2L["16"]["Visible"] = false;
 G2L["16"]["Name"] = [[Scanner]];
 
+G2L["1121"] = Instance.new("UIStroke", G2L["16"]);
+G2L["1121"]["Color"] = Color3.fromRGB(0, 0, 0);
+
+G2L["1123"] = Instance.new("UICorner", G2L["16","1a"]);
+
 -- StarterGui.LALOL Hub Backdoor.Frame.Scanner.Button
 G2L["1a"] = Instance.new("TextButton", G2L["16"]);
 G2L["1a"]["BackgroundColor3"] = Color3.fromRGB(230, 230, 230);
@@ -129,6 +134,9 @@ G2L["1a"]["Size"] = UDim2.new(1, 0, 1, 0);
 G2L["1a"]["Name"] = [[Button]];
 G2L["1a"]["Text"] = [[Scan]];
 G2L["1a"]["BackgroundTransparency"] = 1;
+
+G2L["1122"] = Instance.new("UIStroke", G2L["1a"]);
+G2L["1122"]["Color"] = Color3.fromRGB(0, 0, 0);
 
 -- StarterGui.LALOL Hub Backdoor.Frame.TextLabel
 G2L["1d"] = Instance.new("TextLabel", G2L["2"]);
