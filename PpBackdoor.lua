@@ -14,6 +14,10 @@ G2L["2"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["2"]["Size"] = UDim2.new(0, 482, 0, 276);
 G2L["2"]["Position"] = UDim2.new(0.27320125699043274, 0, 0.3018597960472107, 0);
 
+-- StarterGui.LALOL Hub Backdoor.Frame.UIStroke
+G2L["3"] = Instance.new("UIStroke", G2L["2"]);
+G2L["3"]["Color"] = Color3.fromRGB(255, 255, 255);
+
 -- StarterGui.LALOL Hub Backdoor.Frame.Executor
 G2L["6"] = Instance.new("Folder", G2L["2"]);
 G2L["6"]["Name"] = [[Executor]];
@@ -79,6 +83,9 @@ G2L["11"]["Size"] = UDim2.new(0, 448, 0, 150);
 G2L["11"]["Text"] = [[]];
 G2L["11"]["Position"] = UDim2.new(0.015692640095949173, 0, 0.042270027101039886, 0);
 G2L["11"]["ClearTextOnFocus"] = false;
+
+G2L["112"] = Instance.new("UIStroke", G2L["11"]);
+G2L["112"]["Color"] = Color3.fromRGB(255, 255, 255);
 
 -- StarterGui.LALOL Hub Backdoor.Frame.Executor.ExecutorBox.TextBox.Highlight
 G2L["12"] = Instance.new("LocalScript", G2L["11"]);
