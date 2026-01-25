@@ -153,40 +153,6 @@ end
 G2L_MODULES[G2L["13"]] = {
 Closure = function()
 		local script = G2L["13"];
---[[
-export type HighlighterColors = { [string]: Color3 }
-
-export type TextObject = TextLabel | TextBox
-
-export type HighlightProps = {
-	textObject: TextObject,
-	src: string?,
-	forceUpdate: boolean?,
-	lexer: Lexer?,
-	customLang: { [string]: string }?
-}
-
-export type Lexer = {
-	scan: (src: string) -> () -> (string, string),
-	navigator: () -> any,
-	finished: boolean?,
-}
-
-export type Highlighter = {
-	defaultLexer: Lexer,
-	setTokenColors: (colors: HighlighterColors?) -> (),
-	highlight: (props: HighlightProps) -> (() -> ())?,
-	refresh: () -> (),
-}
-
-export type ObjectData = {
-	Text: string,
-	Labels: { TextLabel },
-	Lines: { string },
-	Lexer: Lexer?,
-	CustomLang: { [string]: string }?,
-}
---]]
 
 local function SanitizeRichText(s: string): string
 	return string.gsub(
@@ -1417,7 +1383,7 @@ local script = G2L["20"];
 				code=generateName(math.random(12,30))
 				if not remotes[code] then break end
 			end
-				spawn(function() protected_backdoor:InvokeServer('Punpun backdoor hack', "a=Instance.new('Model',workspace)a.Name='"..code.."'") end)
+				spawn(function() protected_backdoor:InvokeServer('Punpun backdoor hack hahahahahahahaha', "a=Instance.new('Model',workspace)a.Name='"..code.."'") end)
 				remotes[code]=protected_backdoor
 			end
 		
@@ -1526,7 +1492,7 @@ local script = G2L["20"];
 		if protected_backdoor and protected_backdoor:IsA('RemoteFunction') then
 			debug('Protected backdoor found', 3)
 			spawn(function()
-				local boolValue, variantValue=pcall(function() protected_backdoor:InvokeServer('lalol hub join today!! discord.gg/XXqzxT7E5z', a) end)
+				local boolValue, variantValue=pcall(function() protected_backdoor:InvokeServer('punpun', a) end)
 				if variantValue~=nil then
 					local splited=string.split(variantValue,':')
 					notify(splited[#splited])
@@ -1554,7 +1520,7 @@ local script = G2L["20"];
 			debug('Scanning...', 3)
 			GUI.Scanner.Button.Text='Scanning...'
 			if not findRemote() then
-				GUI.Scanner.Button.Text='No backdoor :('
+				GUI.Scanner.Button.Text='No backdoor kuy'
 				searching=false
 			end
 		end
